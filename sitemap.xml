@@ -1,47 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Home Page -->
   <url>
     <loc>https://djigearportal.com/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>1.0</priority>
   </url>
-
-  <!-- About Page -->
-  <url>
-    <loc>https://djigearportal.com/about.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- How to Buy Page -->
   <url>
     <loc>https://djigearportal.com/how-to-buy.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>0.8</priority>
   </url>
-
-  <!-- Products Page -->
   <url>
-    <loc>https://djigearportal.com/products.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>0.9</priority>
+    <loc>https://djigearportal.com/beginner-guide.html</loc>
   </url>
-
-  <!-- Accessories Page -->
   <url>
-    <loc>https://djigearportal.com/accessories.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>0.7</priority>
+    <loc>https://djigearportal.com/comparison.html</loc>
   </url>
-
-  <!-- Contact Page -->
   <url>
-    <loc>https://djigearportal.com/contact.html</loc>
-    <lastmod>2025-10-22</lastmod>
-    <priority>0.6</priority>
+    <loc>https://djigearportal.com/blog/drones-in-agriculture.html</loc>
   </url>
-
 </urlset>
-
