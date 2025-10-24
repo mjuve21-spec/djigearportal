@@ -371,5 +371,21 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+    <script>
+    // Smooth scroll for Safari and browsers that ignore CSS scroll-behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
