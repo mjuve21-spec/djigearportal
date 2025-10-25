@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DJI Gear Portal — Guides & Blog</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://djigearportal.com/">
+  <meta name="description" content="DJI Gear Portal — your source for DJI drone guides, buying insights, and blog articles for 2025.">
+  <meta name="keywords" content="DJI drones, DJI drone guides, drone buying tips, DJI Mavic, DJI Mini, DJI Air, Inspire 3, Agras drones, drone photography, DJI accessories, best drones 2025, DJI Gear Portal blog">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DJI Gear Portal — Guides & Blog for DJI Drones">
+  <meta property="og:description" content="Explore DJI drone guides, buying insights, and blog articles covering the latest in drone technology for 2025.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://djigearportal.com/">
+  <meta property="og:image" content="https://djigearportal.com/drone3.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DJI Gear Portal — Guides & Blog for DJI Drones">
+  <meta name="twitter:description" content="Explore DJI drone guides, buying insights, and blog articles about DJI technology for 2025.">
+  <meta name="twitter:image" content="https://djigearportal.com/drone3.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="drone3.png" />
+
+  <style>
+    :root{ --accent:#00bfff; --card-radius:12px; --max-width:1200px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#0b2a3a;
+      overflow-x:hidden;
+      background:url("https://se-cdn.djiits.com/tpc/uploads/carousel/image/2422b00fb971de7d9ae7b0d032d9c81b@ultra.jpg") no-repeat center center fixed;
+      background-size:cover;
+    }
+    .overlay{position:fixed; inset:0; background:rgba(255,255,255,0.02); z-index:-1;}
+    .site{max-width:var(--max-width); margin:0 auto; padding:22px; position:relative; z-index:1;}
+
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 12px; background:rgba(0,0,0,0.25); border-radius:12px;}
+    .brand{display:flex; gap:12px; align-items:center;}
+    .logo-box{width:88px; height:54px; background:linear-gradient(135deg,#0b2540,#003a6b); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700;}
+    .site-title{font-size:18px; color:#fff; margin:0;}
+    nav.top-nav{display:flex; gap:12px;}
+    nav.top-nav a{color:#fff; text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600;}
+    nav.top-nav a:hover{color:var(--accent); background:rgba(0,0,0,0.18);}
+
+    .hero{margin:16px 0; padding:48px 20px; border-radius:12px; text-align:center; color:#05304a; background:rgba(255,255,255,0.9); box-shadow:0 10px 40px rgba(11,30,58,0.06);}
+    .hero h1{margin:0; font-size:28px;}
+    .hero p{margin:10px auto 0; max-width:820px; color:#2d5269;}
+
+    .group{margin:28px 0;}
+    .group h2{font-size:18px; color:#073044; margin:0 0 12px 6px;}
+
+    .product-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:18px;}
+    .card{background:#fff; border-radius:var(--card-radius); padding:10px; box-shadow:0 6px 18px rgba(11,30,58,0.08); text-align:center; transition:transform .18s ease, box-shadow .18s ease;}
+    .card:hover{transform:translateY(-6px) scale(1.01); box-shadow:0 18px 40px rgba(7,30,60,0.14);}
+    .card img{width:100%; height:160px; object-fit:cover; border-radius:8px;}
+    .hover-name{position:absolute; left:0; right:0; bottom:8px; margin:auto; width:90%; background:rgba(0,0,0,0.45); color:#fff; border-radius:8px; padding:8px 10px; opacity:0; transform:translateY(8px); transition:opacity .18s, transform .22s;}
+    .card:hover .hover-name{opacity:1; transform:translateY(0);}
+    .blog{margin:36px 0; padding:22px; border-radius:12px; background:rgba(255,255,255,0.9); box-shadow:0 8px 28px rgba(11,30,58,0.05);}
+    .blog-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px;}
+    .blog-card{text-decoration:none; color:#073044; background:#fff; border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(11,30,58,0.08); transition:transform .18s, box-shadow .18s;}
+    .blog-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(7,30,60,0.14);}
+    .blog-card h3{margin:6px 0 8px; font-size:18px;}
+    .read-more{display:inline-block; margin-top:10px; font-weight:700;}
+    footer{margin:26px 0 10px; padding:12px; text-align:center; color:#1a3746; font-size:13px; background:rgba(255,255,255,0.6); border-radius:10px;}
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo-box">DJI<br/>GEAR</div>
+        <div><h2 class="site-title">DJI Gear Portal</h2></div>
+      </div>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#drones">Drones</a>
+        <a href="#cameras">Cameras</a>
+        <a href="#audio">Audio</a>
+        <a href="#gimbals">Gimbals</a>
+        <a href="#blog">Guides & Blog</a>
+      </nav>
+    </header>
+
+    <section class="hero" role="banner">
+      <h1>Discover DJI Gear — Guides & Blog</h1>
+      <p>Your trusted source for DJI drone guides, buying insights, and industry updates.</p>
+    </section>
+
+    <section id="blog" class="blog">
+      <h2>Drone Buying Guides & Blog</h2>
+      <div class="blog-grid">
+        <a class="blog-card" href="blog/drones-in-agriculture.html">
+          <h3>DJI Drones in Agriculture: How Technology Is Transforming Farming</h3>
+          <p>Discover how DJI’s Agras drones are revolutionizing farming with precision spraying, mapping, and smart data.</p>
+          <span class="read-more">Read More →</span>
+        </a>
+
+        <a class="blog-card" href="blog/drones-real-estate.html">
+          <h3>DJI Drones in Real Estate Photography</h3>
+          <p>Learn how the DJI Mini 4 Pro and Air 3 S help real estate professionals capture stunning aerial property photos and videos.</p>
+          <span class="read-more">Read More →</span>
+        </a>
+
+        <a class="blog-card" href="blog/drones-roofing-contractors.html">
+          <h3>DJI Drones for Roofing Contractors</h3>
+          <p>See how DJI Mini 4 Pro and Air 3 S make roof inspections faster, safer, and more precise for contractors and inspectors.</p>
+          <span class="read-more">Read More →</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>About DJI Gear Portal:</strong> DJI Gear Portal is an independent affiliate website dedicated to helping users explore DJI drones, gear, and industry applications. We share guides and blog articles to help creators, contractors, and professionals make informed choices about DJI products. Some of our links direct to official DJI stores — if you purchase through them, we may earn a small affiliate commission at no extra cost to you. All content is written independently and is not sponsored by DJI.</p>
+      <p>© <span id="year"></span> DJI Gear Portal — Guides & Blog.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
