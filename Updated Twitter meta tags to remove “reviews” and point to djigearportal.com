@@ -20,7 +20,8 @@
 <meta property="og:description" content="Explore DJI drone guides, buying insights, and blog articles covering the latest in drone technology for 2025.">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://mjuve21-spec.github.io/djigearportal/">
+<meta property="og:url" content="https://djigearportal.com/">
+
 <meta property="og:image" content="https://mjuve21-spec.github.io/djigearportal/drone3.png">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
