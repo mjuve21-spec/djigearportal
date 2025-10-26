@@ -2,207 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DJI Gear Portal — Drones, Cameras & Accessories</title>
-  <meta name="description" content="Shop DJI drones, cameras, gimbals, and accessories. Official affiliate links to the DJI store.">
+  <meta name="description" content="Shop DJI drones, cameras, gimbals, and audio. Official affiliate links to the DJI store.">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    :root{
+      --card-bg: rgba(0,0,0,0.55);
+      --panel-bg: rgba(0,0,0,0.55);
+      --accent: #4dc8ff;
+      --accent-2:#3bb4ff;
+      --text-soft:#ccc;
+      --maxw:1200px;
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      color:#fff;
       background: url('images/bg-drone.jpg') center/cover fixed no-repeat;
-      color: #fff;
     }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.7);
+    header{
+      text-align:center;
+      padding:60px 20px;
+      background: rgba(0,0,0,0.7);
     }
-
-    header h1 {
-      font-size: 2.6em;
-      color: #3bb4ff;
-      margin-bottom: 10px;
-    }
-
-    section {
-      max-width: 1200px;
-      margin: 60px auto;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 20px;
-      padding: 40px 30px;
+    header h1{font-size:2.6rem;color:var(--accent-2);margin:0 0 10px}
+    header p{margin:0;color:#e7f6ff}
+    section{
+      max-width:var(--maxw);
+      margin:60px auto;
+      background: var(--panel-bg);
+      border-radius: var(--radius);
+      padding:40px 30px;
       backdrop-filter: blur(8px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
     }
-
-    section h2 {
-      text-align: center;
-      color: #4dc8ff;
-      font-size: 1.8em;
-      margin-bottom: 30px;
+    section h2{
+      text-align:center;
+      color:var(--accent);
+      font-size:1.8rem;
+      margin:0 0 30px;
     }
-
-    .grid {
-      display: grid;
+    .grid{
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      justify-content: center;
+      gap:25px;
+      justify-content:center;
     }
-
-    .card {
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 18px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    .card{
+      background:var(--card-bg);
+      border-radius:18px;
+      overflow:hidden;
+      text-align:center;
+      transition: transform .25s ease, box-shadow .25s ease;
+      box-shadow:0 4px 16px rgba(0,0,0,.3);
+      display:flex;
+      flex-direction:column;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    .card:hover{transform:translateY(-5px); box-shadow:0 10px 24px rgba(0,0,0,.5)}
+    .card img{
+      width:100%; height:200px; object-fit:cover;
+      border-bottom:2px solid rgba(255,255,255,.08);
+      display:block;
     }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 2px solid rgba(255,255,255,0.1);
-    }
-
-    .card h3 {
-      color: #3bb4ff;
-      margin: 15px 0 5px 0;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 0.95em;
-      margin-bottom: 20px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: rgba(0, 0, 0, 0.7);
-      font-size: 0.9em;
-      color: #aaa;
+    .card h3{color:var(--accent-2); margin:14px 10px 6px; font-size:1.05rem}
+    .card p{color:var(--text-soft); margin:0 12px 18px; font-size:.95rem}
+    a.card{color:inherit; text-decoration:none}
+    footer{
+      text-align:center; padding:25px;
+      background: rgba(0,0,0,0.7); color:#aaa; font-size:.9rem
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>DJI Gear Portal</h1>
-    <p>Your trusted DJI affiliate hub — Drones, Cameras & Creative Tools</p>
+    <p>Your trusted DJI affiliate hub — drones, cameras, gimbals & audio.</p>
   </header>
 
   <!-- ===== DRONES ===== -->
-  <section>
-    <h2>Featured DJI Drones</h2>
+  <section aria-labelledby="drones-title">
+    <h2 id="drones-title">Featured DJI Drones</h2>
     <div class="grid">
-      <a class="card" href="https://store.dji.com/ca/product/dji-mini-4-pro?clickaid=aiRLfBVBHLcANpB83VDRvSIJRhL8ZBBL" target="_blank">
+
+      <!-- Mini 4 Pro -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-mini-4-pro?clickaid=aiRLfBVBHLcANpB83VDRvSIJRhL8ZBBL" target="_blank" rel="noopener">
         <img src="images/mini4pro.jpg" alt="DJI Mini 4 Pro">
         <h3>DJI Mini 4 Pro</h3>
         <p>Compact and powerful — perfect for travel and creators.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-air-3s?clickaid=ABxHo6l_d_zv5zLbBXuz0w" target="_blank">
-        <img src="images/air3s.jpg" alt="DJI Air 3S">
+      <!-- Air 3S (uses fallback image if air3s.jpg not present yet) -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-air-3s?clickaid=ABxHo6l_d_zv5zLbBXuz0w" target="_blank" rel="noopener">
+        <img src="images/air3s.jpg"
+             alt="DJI Air 3S"
+             onerror="this.onerror=null; this.src='images/mini3pro.jpg';">
         <h3>DJI Air 3S</h3>
         <p>Dual-camera system for aerial photography and videography.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-mavic-4-pro?clickaid=AEMi8wRrhEzG6iYotVK-xw" target="_blank">
+      <!-- Mavic 4 Pro -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-mavic-4-pro?clickaid=AEMi8wRrhEzG6iYotVK-xw" target="_blank" rel="noopener">
         <img src="images/mavic4pro.jpg" alt="DJI Mavic 4 Pro">
         <h3>DJI Mavic 4 Pro</h3>
         <p>Professional-grade drone with industry-leading imaging.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-inspire-3?clickaid=f2BOx64zdXJjG1zcGlDU_miANh1f0up3" target="_blank">
+      <!-- Inspire 3 -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-inspire-3?clickaid=f2BOx64zdXJjG1zcGlDU_miANh1f0up3" target="_blank" rel="noopener">
         <img src="images/inspire3.png" alt="DJI Inspire 3">
         <h3>DJI Inspire 3</h3>
         <p>Flagship aerial cinematography system for professionals.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-agras-t50" target="_blank">
-        <img src="images/agras.jpg" alt="DJI Agras T50">
-        <h3>DJI Agras T50</h3>
-        <p>Heavy-duty agricultural drone for precision farming.</p>
-      </a>
     </div>
   </section>
 
-  <!-- ===== CAMERAS ===== -->
-  <section>
-    <h2>Cameras & Action Gear</h2>
+  <!-- ===== CAMERAS & ACTION ===== -->
+  <section aria-labelledby="cameras-title">
+    <h2 id="cameras-title">Cameras & Action Gear</h2>
     <div class="grid">
-      <a class="card" href="https://store.dji.com/ca/product/osmo-pocket-3" target="_blank">
+
+      <!-- Osmo Pocket 3 -->
+      <a class="card" href="https://store.dji.com/ca/product/osmo-pocket-3?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/pocket3.jpg" alt="DJI Osmo Pocket 3">
         <h3>DJI Osmo Pocket 3</h3>
         <p>Compact handheld 4K camera with gimbal stabilization.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/osmo-action-4" target="_blank">
+      <!-- Osmo Action 4 -->
+      <a class="card" href="https://store.dji.com/ca/product/osmo-action-4?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/action4.jpg" alt="DJI Osmo Action 4">
         <h3>DJI Osmo Action 4</h3>
-        <p>Waterproof action camera for creators and adventurers.</p>
+        <p>Rugged action camera with excellent low-light performance.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/osmo-mobile-7p" target="_blank">
+      <!-- Osmo Mobile 7P -->
+      <a class="card" href="https://store.dji.com/ca/product/osmo-mobile-7p?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/mobile7p.jpg" alt="DJI Osmo Mobile 7P">
         <h3>DJI Osmo Mobile 7P</h3>
-        <p>Smartphone gimbal with next-level stabilization and control.</p>
+        <p>Next-gen smartphone gimbal for silky smooth video.</p>
       </a>
+
     </div>
   </section>
 
   <!-- ===== GIMBALS ===== -->
-  <section>
-    <h2>Professional Gimbals</h2>
+  <section aria-labelledby="gimbals-title">
+    <h2 id="gimbals-title">Professional Gimbals</h2>
     <div class="grid">
-      <a class="card" href="https://store.dji.com/ca/product/dji-rs-4-mini" target="_blank">
+
+      <!-- RS 4 Mini -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-rs-4-mini?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/rs4mini.jpg" alt="DJI RS 4 Mini">
         <h3>DJI RS 4 Mini</h3>
-        <p>Lightweight stabilizer designed for small mirrorless cameras.</p>
+        <p>Lightweight stabilizer for mirrorless cameras.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-ronin-4d" target="_blank">
+      <!-- Ronin 4D -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-ronin-4d?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/rs4ronin.jpg" alt="DJI Ronin 4D">
         <h3>DJI Ronin 4D</h3>
-        <p>Integrated 4-axis gimbal camera system for cinematic production.</p>
+        <p>Integrated 4-axis gimbal camera system for cinema-grade footage.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-ronin-sc" target="_blank">
+      <!-- Ronin-SC -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-ronin-sc?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/roninsc.jpg" alt="DJI Ronin SC">
         <h3>DJI Ronin SC</h3>
         <p>Compact, precise, and ideal for solo creators.</p>
       </a>
+
     </div>
   </section>
 
   <!-- ===== AUDIO ===== -->
-  <section>
-    <h2>DJI Audio</h2>
+  <section aria-labelledby="audio-title">
+    <h2 id="audio-title">DJI Audio</h2>
     <div class="grid">
-      <a class="card" href="https://store.dji.com/ca/product/dji-mic-2" target="_blank">
+
+      <!-- Mic 2 -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-mic-2?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/mic2.jpg" alt="DJI Mic 2">
         <h3>DJI Mic 2</h3>
         <p>High-quality wireless audio for video creators and podcasters.</p>
       </a>
 
-      <a class="card" href="https://store.dji.com/ca/product/dji-mic-3" target="_blank">
+      <!-- Mic 3 -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-mic-3?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
         <img src="images/mic3.jpg" alt="DJI Mic 3">
         <h3>DJI Mic 3</h3>
-        <p>Professional wireless dual-mic setup for crystal-clear sound.</p>
+        <p>Professional dual-mic setup with crystal-clear sound.</p>
       </a>
+
     </div>
   </section>
 
@@ -211,3 +204,5 @@
   </footer>
 </body>
 </html>
+
+   
