@@ -39,7 +39,7 @@
       color: #cfd8dc;
     }
 
-    /* === MODERN GALLERY SECTIONS === */
+    /* === GALLERY SECTIONS === */
     .gallery-section {
       text-align: center;
       margin: 60px auto;
@@ -86,7 +86,7 @@
       font-size: 1.1em;
     }
 
-    /* === FLOATING DRONE ANIMATION === */
+    /* === FLOATING DRONE === */
     .drone-float {
       position: fixed;
       bottom: 40px;
@@ -98,12 +98,8 @@
     }
 
     @keyframes floatdrone {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-10px) rotate(1deg);
-      }
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
     }
 
     footer {
@@ -117,13 +113,13 @@
 
 <body>
 
-  <!-- === HERO / PARALLAX SECTION === -->
+  <!-- === HERO / PARALLAX === -->
   <div class="parallax">
     <h1>DJI Gear Portal — Guides & Blog</h1>
     <p>Explore the latest DJI drones, cameras, gimbals, and professional audio gear.</p>
   </div>
 
-  <!-- === CAMERAS & ACTION GEAR === -->
+  <!-- === CAMERAS === -->
   <section class="gallery-section">
     <h2>Cameras & Action Gear</h2>
     <div class="gallery-grid">
@@ -146,7 +142,7 @@
     </div>
   </section>
 
-  <!-- === AUDIO EQUIPMENT === -->
+  <!-- === AUDIO === -->
   <section class="gallery-section">
     <h2>Audio Equipment</h2>
     <div class="gallery-grid">
@@ -161,7 +157,7 @@
     </div>
   </section>
 
-  <!-- === GIMBALS & STABILIZERS === -->
+  <!-- === GIMBALS === -->
   <section class="gallery-section">
     <h2>Gimbals & Stabilizers</h2>
     <div class="gallery-grid">
@@ -184,7 +180,7 @@
     </div>
   </section>
 
-  <!-- === BLOG / DRONE GUIDES === -->
+  <!-- === BLOG === -->
   <section class="gallery-section">
     <h2>Drone Guides & Blog</h2>
     <div class="gallery-grid">
@@ -207,7 +203,7 @@
     </div>
   </section>
 
-  <!-- === FLOATING DRONE (LOOPING) === -->
+  <!-- === FLOATING DRONE === -->
   <img src="images/drone.png" alt="Flying Drone" class="drone-float" />
 
   <footer>
