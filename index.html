@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DJI Gear Portal</title>
+  <title>DJI Gear Portal — Drones, Cameras & Guides</title>
 
   <style>
-    /* ====== GENERAL PAGE STYLING ====== */
+    /* ===== GLOBAL STYLE ===== */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #0d1b2a, #1b263b, #0d1b2a);
       color: #f1f1f1;
-      background-attachment: fixed;
-      background-size: cover;
-      background-image: url("images/bg-drone.jpg");
+      background: url("images/bg-drone.jpg") center/cover fixed no-repeat;
       overflow-x: hidden;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+
     h1, h2, h3 {
-      font-weight: 700;
       text-align: center;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #b3d9ff;
+      margin: 60px 0 25px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     a {
@@ -32,8 +52,8 @@
       text-decoration: underline;
     }
 
-    /* ====== PRODUCT GRID ====== */
-    .product-grid {
+    /* ===== GRID LAYOUT ===== */
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
@@ -43,26 +63,35 @@
       margin: 0 auto;
     }
 
+    /* ===== CARD STYLE ===== */
     .card {
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 18px;
       overflow: hidden;
       text-align: center;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 1s ease forwards;
     }
 
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
     }
 
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      display: block;
       border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      display: block;
     }
 
     .card h3 {
@@ -72,108 +101,60 @@
     }
 
     .card p {
+      margin: 0 0 15px;
       color: #f1f1f1;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
     }
 
-    /* ====== SECTION HEADINGS ====== */
-    .group h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      color: #b3d9ff;
-      margin: 60px 0 25px;
+    /* ===== ANIMATION ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ====== GALLERY SECTION ====== */
-    .gallery-section {
-      text-align: center;
-      margin: 60px auto;
-      max-width: 1200px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      justify-content: center;
-      padding: 0 20px;
-    }
-
-    .gallery-card {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .gallery-card:hover {
-      transform: scale(1.03);
-    }
-
-    .gallery-card h3 {
-      color: #b3d9ff;
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-
-    .gallery-card p {
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-      color: #e1e1e1;
-    }
-
-    /* ====== FOOTER ====== */
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 25px;
       font-size: 0.9rem;
       color: #ccc;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
+      margin-top: 50px;
     }
-
   </style>
 </head>
 <body>
 
   <header>
     <h1>DJI Gear Portal</h1>
-    <p>Your affiliate hub for DJI drones and creative gear</p>
+    <p style="text-align:center;">Your affiliate hub for DJI drones, cameras, and creative tools.</p>
   </header>
 
-  <!-- ===== FEATURED GALLERY SECTION ===== -->
-  <section class="gallery-section">
-    <h2>Featured DJI Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-card">
-        <img src="images/mavic4pro.jpg" alt="Mavic 4 Pro" />
+  <!-- ===== FEATURED DRONES ===== -->
+  <section>
+    <h2>Featured DJI Drones</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/mavic4pro.jpg" alt="Mavic 4 Pro">
         <h3>Mavic 4 Pro</h3>
         <p>Professional aerial imaging performance for creators.</p>
       </div>
-      <div class="gallery-card">
-        <img src="images/mini4pro.jpg" alt="DJI Mini 4 Pro" />
+      <div class="card">
+        <img src="images/mini4pro.jpg" alt="Mini 4 Pro">
         <h3>Mini 4 Pro</h3>
         <p>Lightweight and powerful drone for travelers.</p>
       </div>
-      <div class="gallery-card">
-        <img src="images/inspire3.png" alt="DJI Inspire 3" />
+      <div class="card">
+        <img src="images/inspire3.png" alt="Inspire 3">
         <h3>Inspire 3</h3>
         <p>Cinematic-grade drone for professional filmmakers.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CAMERAS & ACTION GEAR ===== -->
-  <section class="group">
+  <!-- ===== CAMERAS ===== -->
+  <section>
     <h2>Cameras & Action Gear</h2>
-    <div class="product-grid">
+    <div class="grid">
       <div class="card">
         <img src="images/pocket3.jpg" alt="Osmo Pocket 3">
         <h3>Osmo Pocket 3</h3>
@@ -197,9 +178,79 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== AUDIO ===== -->
+  <section>
+    <h2>Audio Equipment</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/mic3.jpg" alt="DJI Mic 3">
+        <h3>DJI Mic 3</h3>
+        <p>Pro wireless microphone kit (2TX + 1RX).</p>
+      </div>
+      <div class="card">
+        <img src="images/mic2.jpg" alt="DJI Mic 2">
+        <h3>DJI Mic 2</h3>
+        <p>Reliable wireless mic kit (2TX + 1RX).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GIMBALS ===== -->
+  <section>
+    <h2>Gimbals & Stabilizers</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/rs4mini.jpg" alt="DJI RS 4 Mini">
+        <h3>DJI RS 4 Mini</h3>
+        <p>Lightweight gimbal for hybrid shooters.</p>
+      </div>
+      <div class="card">
+        <img src="images/rs4ronin.jpg" alt="DJI RS 4 / Ronin 4D">
+        <h3>DJI RS 4 / Ronin 4D</h3>
+        <p>Professional stabilizers & cinema systems.</p>
+      </div>
+      <div class="card">
+        <img src="images/rs3mini.jpg" alt="DJI RS 3 Mini">
+        <h3>DJI RS 3 Mini</h3>
+        <p>Compact stabilizer for solo creators.</p>
+      </div>
+      <div class="card">
+        <img src="images/roninsc.jpg" alt="Ronin-SC">
+        <h3>Ronin-SC</h3>
+        <p>Light stabilizer for mirrorless shooters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section>
+    <h2>Drone Guides & Blog</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/blog-agriculture.jpg" alt="DJI Drones in Agriculture">
+        <h3>DJI Drones in Agriculture</h3>
+        <p>Precision spraying, mapping, and smart data.</p>
+      </div>
+      <div class="card">
+        <img src="images/blog-construction.jpg" alt="DJI Drones in Construction">
+        <h3>DJI Drones in Construction</h3>
+        <p>Mapping, inspections, safety, and 3D modeling.</p>
+      </div>
+      <div class="card">
+        <img src="images/blog-realestate.jpg" alt="DJI Drones for Real Estate">
+        <h3>DJI Drones for Real Estate</h3>
+        <p>Photos and video for listings.</p>
+      </div>
+      <div class="card">
+        <img src="images/blog-roofing.jpg" alt="DJI Drones for Roofing Contractors">
+        <h3>DJI Drones for Roofing Contractors</h3>
+        <p>Faster, safer estimates and reporting.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 DJI Gear Portal — affiliate site. We link to official DJI product pages.</p>
+    © 2025 DJI Gear Portal — affiliate site. We link to official DJI product pages.
   </footer>
 
 </body>
