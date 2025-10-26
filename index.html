@@ -1,103 +1,206 @@
-<style>
-/* Product grid layout */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  justify-content: center;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJI Gear Portal</title>
 
-/* Card container */
-.card {
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 18px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  <style>
+    /* ====== GENERAL PAGE STYLING ====== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0d1b2a, #1b263b, #0d1b2a);
+      color: #f1f1f1;
+      background-attachment: fixed;
+      background-size: cover;
+      background-image: url("images/bg-drone.jpg");
+      overflow-x: hidden;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-}
+    h1, h2, h3 {
+      font-weight: 700;
+      text-align: center;
+    }
 
-/* Image scaling */
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
+    a {
+      color: #6ec6ff;
+      text-decoration: none;
+    }
 
-/* Text styling */
-.card h3 {
-  color: #b3d9ff;
-  font-size: 1.2rem;
-  margin: 12px 0 4px;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-.card p {
-  color: #f1f1f1;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
+    /* ====== PRODUCT GRID ====== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Section headings */
-.group h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #b3d9ff;
-  margin: 60px 0 25px;
-}
+    .card {
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 18px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Blog grid layout */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto 60px;
-}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+    }
 
-.blog-card {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 18px;
-  overflow: hidden;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
 
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
+    .card h3 {
+      color: #b3d9ff;
+      font-size: 1.1rem;
+      margin: 12px 0 4px;
+    }
 
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-}
+    .card p {
+      color: #f1f1f1;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
 
-.blog-card h3 {
-  color: #b3d9ff;
-  font-size: 1.2rem;
-  margin: 10px 16px 6px;
-}
+    /* ====== SECTION HEADINGS ====== */
+    .group h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #b3d9ff;
+      margin: 60px 0 25px;
+    }
 
-.blog-card p {
-  color: #f1f1f1;
-  margin: 0 16px 12px;
-}
+    /* ====== GALLERY SECTION ====== */
+    .gallery-section {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 1200px;
+    }
 
-.read-more {
-  color: #66b3ff;
-  margin: 0 16px 14px;
-  display: inline-block;
-}
-</style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .gallery-card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-card h3 {
+      color: #b3d9ff;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .gallery-card p {
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      color: #e1e1e1;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #ccc;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DJI Gear Portal</h1>
+    <p>Your affiliate hub for DJI drones and creative gear</p>
+  </header>
+
+  <!-- ===== FEATURED GALLERY SECTION ===== -->
+  <section class="gallery-section">
+    <h2>Featured DJI Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="images/mavic4pro.jpg" alt="Mavic 4 Pro" />
+        <h3>Mavic 4 Pro</h3>
+        <p>Professional aerial imaging performance for creators.</p>
+      </div>
+      <div class="gallery-card">
+        <img src="images/mini4pro.jpg" alt="DJI Mini 4 Pro" />
+        <h3>Mini 4 Pro</h3>
+        <p>Lightweight and powerful drone for travelers.</p>
+      </div>
+      <div class="gallery-card">
+        <img src="images/inspire3.png" alt="DJI Inspire 3" />
+        <h3>Inspire 3</h3>
+        <p>Cinematic-grade drone for professional filmmakers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAMERAS & ACTION GEAR ===== -->
+  <section class="group">
+    <h2>Cameras & Action Gear</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="images/pocket3.jpg" alt="Osmo Pocket 3">
+        <h3>Osmo Pocket 3</h3>
+        <p>Handheld pocket camera with pro features.</p>
+      </div>
+      <div class="card">
+        <img src="images/action4.jpg" alt="Osmo Action 4">
+        <h3>Osmo Action 4</h3>
+        <p>Next-gen action cam for outdoor pros.</p>
+      </div>
+      <div class="card">
+        <img src="images/mobile7p.jpg" alt="Osmo Mobile 7P">
+        <h3>Osmo Mobile 7P</h3>
+        <p>Portable smartphone gimbal for silky footage.</p>
+      </div>
+      <div class="card">
+        <img src="images/action5pro.jpg" alt="Osmo Action 5 Pro">
+        <h3>Osmo Action 5 Pro</h3>
+        <p>Rugged, pro-grade action camera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 DJI Gear Portal — affiliate site. We link to official DJI product pages.</p>
+  </footer>
+
+</body>
+</html>
