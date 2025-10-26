@@ -173,6 +173,42 @@
   </div>
 </section>
 <style>
+  /* Adjust image gallery grid and make sure all rows show */
+.image-gallery {
+  padding: 60px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Section title */
+.image-gallery h2 {
+  text-align: center;
+  color: #9bd3ff;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
 .image-gallery {
   text-align: center;
   margin: 60px auto;
