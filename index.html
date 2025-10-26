@@ -1,158 +1,103 @@
-<!-- ✈️ DRONES -->
-<section id="drones" class="group" aria-labelledby="drones-title">
-  <h2 id="drones-title">Drones</h2>
-  <div class="product-grid">
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-mini-4-pro?pm=link" target="_blank" rel="noopener">
-        <img src="images/mini4pro.jpg" alt="DJI Mini 4 Pro">
-        <div class="hover-name">DJI Mini 4 Pro</div>
-      </a>
-      <h3>DJI Mini 4 Pro</h3>
-      <p>Lightweight and smart — perfect for creators on the move.</p>
-    </div>
+<style>
+/* Product grid layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-mini-3-pro?pm=link" target="_blank" rel="noopener">
-        <img src="images/mini3pro.jpg" alt="DJI Mini 3 Pro">
-        <div class="hover-name">DJI Mini 3 Pro</div>
-      </a>
-      <h3>DJI Mini 3 Pro</h3>
-      <p>Compact, travel-friendly drone for everyday aerial shots.</p>
-    </div>
+/* Card container */
+.card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-mavic-4-pro?pm=link" target="_blank" rel="noopener">
-        <img src="images/mavic4pro.jpg" alt="DJI Mavic 4 Pro">
-        <div class="hover-name">DJI Mavic 4 Pro</div>
-      </a>
-      <h3>DJI Mavic 4 Pro</h3>
-      <p>Professional imaging and stability for advanced pilots.</p>
-    </div>
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-inspire-3?pm=link" target="_blank" rel="noopener">
-        <img src="images/inspire3.png" alt="DJI Inspire 3">
-        <div class="hover-name">DJI Inspire 3</div>
-      </a>
-      <h3>DJI Inspire 3</h3>
-      <p>Cinematic-grade performance for professional productions.</p>
-    </div>
-  </div>
-</section>
+/* Image scaling */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
 
-<!-- 🎥 CAMERAS & ACTION GEAR -->
-<section id="cameras" class="group" aria-labelledby="cameras-title">
-  <h2 id="cameras-title">Cameras & Action Gear</h2>
-  <div class="product-grid">
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/osmo-pocket-3?pm=link" target="_blank" rel="noopener">
-        <img src="images/pocket3.jpg" alt="DJI Osmo Pocket 3">
-        <div class="hover-name">Osmo Pocket 3</div>
-      </a>
-      <h3>Osmo Pocket 3</h3>
-      <p>Handheld pocket camera with pro-level stabilization and 4K quality.</p>
-    </div>
+/* Text styling */
+.card h3 {
+  color: #b3d9ff;
+  font-size: 1.2rem;
+  margin: 12px 0 4px;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/osmo-action-4?pm=link" target="_blank" rel="noopener">
-        <img src="images/action4a.jpg" alt="DJI Osmo Action 4">
-        <div class="hover-name">Osmo Action 4</div>
-      </a>
-      <h3>Osmo Action 4</h3>
-      <p>Durable action cam designed for outdoor and adventure creators.</p>
-    </div>
+.card p {
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/osmo-mobile-7p?pm=link" target="_blank" rel="noopener">
-        <img src="images/mobile7p.jpg" alt="DJI Osmo Mobile 7P">
-        <div class="hover-name">Osmo Mobile 7P</div>
-      </a>
-      <h3>Osmo Mobile 7P</h3>
-      <p>Advanced smartphone gimbal for cinematic phone footage.</p>
-    </div>
-  </div>
-</section>
+/* Section headings */
+.group h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #b3d9ff;
+  margin: 60px 0 25px;
+}
 
-<!-- 🎧 AUDIO EQUIPMENT -->
-<section id="audio" class="group" aria-labelledby="audio-title">
-  <h2 id="audio-title">Audio Equipment</h2>
-  <div class="product-grid">
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-mic-3?pm=link" target="_blank" rel="noopener">
-        <img src="images/mic3.jpg" alt="DJI Mic 3">
-        <div class="hover-name">DJI Mic 3</div>
-      </a>
-      <h3>DJI Mic 3</h3>
-      <p>Professional wireless microphone kit for clear on-the-go sound.</p>
-    </div>
+/* Blog grid layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-mic-2?pm=link" target="_blank" rel="noopener">
-        <img src="images/mic2.jpg" alt="DJI Mic 2">
-        <div class="hover-name">DJI Mic 2</div>
-      </a>
-      <h3>DJI Mic 2</h3>
-      <p>Compact dual-transmitter system perfect for vloggers and pros.</p>
-    </div>
-  </div>
-</section>
+.blog-card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-<!-- 🦾 GIMBALS & STABILIZERS -->
-<section id="gimbals" class="group" aria-labelledby="gimbals-title">
-  <h2 id="gimbals-title">Gimbals & Stabilizers</h2>
-  <div class="product-grid">
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-rs-4-mini?pm=link" target="_blank" rel="noopener">
-        <img src="images/rs4mini.jpg" alt="DJI RS 4 Mini">
-        <div class="hover-name">DJI RS 4 Mini</div>
-      </a>
-      <h3>DJI RS 4 Mini</h3>
-      <p>Lightweight gimbal for hybrid camera setups and portability.</p>
-    </div>
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-ronin-4d?pm=link" target="_blank" rel="noopener">
-        <img src="images/rs4ronin.jpg" alt="DJI Ronin 4D">
-        <div class="hover-name">DJI Ronin 4D</div>
-      </a>
-      <h3>DJI Ronin 4D</h3>
-      <p>Flagship gimbal with full-frame cinema capability.</p>
-    </div>
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
 
-    <div class="card">
-      <a href="https://store.dji.com/ca/product/dji-rs-3-mini?pm=link" target="_blank" rel="noopener">
-        <img src="images/rs3mini.jpg" alt="DJI RS 3 Mini">
-        <div class="hover-name">DJI RS 3 Mini</div>
-      </a>
-      <h3>DJI RS 3 Mini</h3>
-      <p>Compact and lightweight for creators who travel light.</p>
-    </div>
-  </div>
-</section>
+.blog-card h3 {
+  color: #b3d9ff;
+  font-size: 1.2rem;
+  margin: 10px 16px 6px;
+}
 
-<!-- 📰 BLOG SECTION -->
-<section id="blog" class="blog" aria-labelledby="blog-title">
-  <h2 id="blog-title">DJI Blog & Guides</h2>
-  <div class="blog-grid">
-    <a class="blog-card" href="blog/drones-in-agriculture.html">
-      <img src="images/blog-agriculture.jpg" alt="DJI Drones in Agriculture">
-      <h3>DJI Drones in Agriculture</h3>
-      <p>How DJI Agras drones are revolutionizing modern farming.</p>
-      <span class="read-more">Read More →</span>
-    </a>
+.blog-card p {
+  color: #f1f1f1;
+  margin: 0 16px 12px;
+}
 
-    <a class="blog-card" href="blog/drones-in-construction.html">
-      <img src="images/blog-construction.jpg" alt="DJI Drones in Construction">
-      <h3>DJI Drones in Construction</h3>
-      <p>Mapping, surveying, and boosting site safety with DJI drones.</p>
-      <span class="read-more">Read More →</span>
-    </a>
-
-    <a class="blog-card" href="blog/drones-in-realestate.html">
-      <img src="images/blog-realestate.jpg" alt="DJI Drones in Real Estate">
-      <h3>DJI Drones in Real Estate</h3>
-      <p>Transforming property marketing with aerial photography.</p>
-      <span class="read-more">Read More →</span>
-    </a>
-  </div>
-</section>
+.read-more {
+  color: #66b3ff;
+  margin: 0 16px 14px;
+  display: inline-block;
+}
+</style>
