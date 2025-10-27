@@ -21,6 +21,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color:#fff;
       background: url('images/bg-drone.jpg') center/cover fixed no-repeat;
+      overflow-x:hidden;
     }
     header{
       text-align:center;
@@ -59,6 +60,8 @@
       box-shadow:0 4px 16px rgba(0,0,0,.3);
       display:flex;
       flex-direction:column;
+      text-decoration:none;
+      color:inherit;
     }
     .card:hover{transform:translateY(-5px); box-shadow:0 10px 24px rgba(0,0,0,.5)}
     .card img{
@@ -68,10 +71,35 @@
     }
     .card h3{color:var(--accent-2); margin:14px 10px 6px; font-size:1.05rem}
     .card p{color:var(--text-soft); margin:0 12px 18px; font-size:.95rem}
-    a.card{color:inherit; text-decoration:none}
+
     footer{
       text-align:center; padding:25px;
-      background: rgba(0,0,0,0.7); color:#aaa; font-size:.9rem
+      background: rgba(0,0,0,0.7); color:#aaa; font-size:.9rem;
+      position:relative; z-index:1;
+    }
+
+    /* Bottom hovering drone animation */
+    .bottom-drone-wrap{
+      position:fixed; left:0; right:0; bottom:24px; height:120px;
+      pointer-events:none; z-index:999;
+    }
+    .bottom-drone{
+      position:absolute; width:120px; height:auto; bottom:10px; left:50%;
+      transform:translateX(-50%);
+      filter: drop-shadow(0 12px 28px rgba(0,20,40,0.36));
+      animation: hoverX 9s ease-in-out infinite;
+    }
+    @keyframes hoverX{
+      0%   { transform: translateX(-50%) translateY(0) }
+      25%  { transform: translateX(-20%) translateY(-6px) }
+      50%  { transform: translateX(10%) translateY(0) }
+      75%  { transform: translateX(-20%) translateY(6px) }
+      100% { transform: translateX(-50%) translateY(0) }
+    }
+
+    @media (max-width:700px){
+      .card img{height:180px}
+      .bottom-drone-wrap{display:none;} /* optional: hide on small screens */
     }
   </style>
 </head>
@@ -86,17 +114,16 @@
     <h2 id="drones-title">Featured DJI Drones</h2>
     <div class="grid">
 
-      <!-- Mini 4 Pro -->
+      <!-- Mini 4 Pro (fixed image) -->
       <a class="card" href="https://store.dji.com/ca/product/dji-mini-4-pro?clickaid=aiRLfBVBHLcANpB83VDRvSIJRhL8ZBBL" target="_blank" rel="noopener">
         <img src="images/mini4pro.jpg" alt="DJI Mini 4 Pro">
         <h3>DJI Mini 4 Pro</h3>
         <p>Compact and powerful — perfect for travel and creators.</p>
       </a>
 
-      <!-- Air 3S (uses fallback image if air3s.jpg not present yet) -->
+      <!-- Air 3S (correct image with safe fallback) -->
       <a class="card" href="https://store.dji.com/ca/product/dji-air-3s?clickaid=ABxHo6l_d_zv5zLbBXuz0w" target="_blank" rel="noopener">
-        <img src="images/air3s.jpg"
-             alt="DJI Air 3S"
+        <img src="images/air3s.jpg" alt="DJI Air 3S"
              onerror="this.onerror=null; this.src='images/mini3pro.jpg';">
         <h3>DJI Air 3S</h3>
         <p>Dual-camera system for aerial photography and videography.</p>
@@ -167,11 +194,11 @@
         <p>Integrated 4-axis gimbal camera system for cinema-grade footage.</p>
       </a>
 
-      <!-- Ronin-SC -->
-      <a class="card" href="https://store.dji.com/ca/product/dji-ronin-sc?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
-        <img src="images/roninsc.jpg" alt="DJI Ronin SC">
-        <h3>DJI Ronin SC</h3>
-        <p>Compact, precise, and ideal for solo creators.</p>
+      <!-- RS 3 Mini (replaces Ronin-SC dead page) -->
+      <a class="card" href="https://store.dji.com/ca/product/dji-rs-3-mini?clickaid=YOUR_AFFILIATE_ID" target="_blank" rel="noopener">
+        <img src="images/rs3mini.jpg" alt="DJI RS 3 Mini">
+        <h3>DJI RS 3 Mini</h3>
+        <p>Compact, precise stabilizer ideal for solo creators.</p>
       </a>
 
     </div>
@@ -202,7 +229,10 @@
   <footer>
     © 2025 DJI Gear Portal — Affiliate partner linking directly to the official DJI store.
   </footer>
+
+  <!-- Bottom hovering drone animation -->
+  <div class="bottom-drone-wrap" aria-hidden="true">
+    <img class="bottom-drone" src="images/drone.png" alt="">
+  </div>
 </body>
 </html>
-
-   
