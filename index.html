@@ -1,245 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DJI Gear Portal | Your DJI Drone & Camera Affiliate Hub</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DJI Gear Portal — Guides & Blog</title>
 
-  <meta name="description" content="Explore DJI drones, cameras, and accessories — from the Mavic 4 Pro and Air 3S to the Inspire 3. Learn through guides, comparisons, and blog posts about how drones are transforming industries." />
-  <meta name="keywords" content="DJI, drones, affiliate, Mavic 4 Pro, Air 3S, Inspire 3, Osmo Action 5, Osmo Pocket 3, drone blog, drone guide, drone photography" />
+  <!-- SEO -->
+  <link rel="canonical" href="https://djigearportal.com/">
+  <meta name="description" content="DJI Gear Portal — your source for DJI drone guides and blog insights. Explore DJI Mavic, Mini, Air, Inspire, Osmo gear, plus industry use-cases like construction, roofing, real estate, and agriculture." />
+  <meta name="keywords" content="DJI drones, DJI Mavic, DJI Air, DJI Mini, Inspire 3, Osmo, drone guides, drone blog, drones in construction, roofing, real estate, agriculture" />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="images/drone.png" type="image/png" />
+
+  <!-- Social -->
+  <meta property="og:title" content="DJI Gear Portal — Guides & Blog" />
+  <meta property="og:description" content="Guides and industry insights for DJI drones and gear." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://djigearportal.com/" />
+  <meta property="og:image" content="https://djigearportal.com/images/drone.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DJI Gear Portal — Guides & Blog" />
+  <meta name="twitter:description" content="Guides and industry insights for DJI drones and gear." />
+  <meta name="twitter:image" content="https://djigearportal.com/images/drone.png" />
+
+  <link rel="icon" type="image/png" href="images/drone.png" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1320;
-      color: #f4f6f9;
-      line-height: 1.6;
-      overflow-x: hidden;
+    :root{
+      --accent:#00bfff;
+      --ink:#f4f6f9;
+      --bg:#0b1320;
+      --card:rgba(255,255,255,0.05);
+      --shadow:0 0 15px rgba(0,0,0,.35);
+      --shadow-strong:0 0 28px rgba(0,191,255,.35);
+      --radius:14px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#000;
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
     }
 
-    /* ===== Parallax Background ===== */
-    .parallax-bg {
-      background-image: url("images/bg-drone.jpg");
-      min-height: 100vh;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
+    /* Parallax background wrapper */
+    .parallax-bg{
+      background:url("images/bg-drone.jpg") center/cover fixed no-repeat;
+      min-height:100vh;
+      position:relative;
+    }
+    .overlay{
+      background:rgba(0,0,0,.62);
+      min-height:100vh;
+    }
+    .site{ max-width:var(--max); margin:0 auto; padding:22px; position:relative; z-index:1;}
+
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:18px 12px; background:rgba(0,0,0,.28); border-radius:12px;
+      backdrop-filter: blur(4px);
+    }
+    .brand{ display:flex; gap:12px; align-items:center }
+    .logo-box{ width:88px; height:54px; background:linear-gradient(135deg,#0b2540,#003a6b);
+      border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff;
+      font-weight:700; letter-spacing:.6px; }
+    .site-title{ font-size:18px; color:#fff; margin:0 }
+    nav.top-nav{ display:flex; gap:12px; flex-wrap:wrap }
+    nav.top-nav a{ color:#fff; text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600 }
+    nav.top-nav a:hover{ color:var(--accent); background:rgba(0,0,0,.18) }
+
+    .hero{
+      margin:18px 0 8px; padding:38px 18px; border-radius:12px; text-align:center;
+      color:#05304a; background:rgba(255,255,255,.9); box-shadow:0 10px 40px rgba(11,30,58,.08)
+    }
+    .hero h1{ margin:0; font-size:28px; color:#073044 }
+    .hero p{ margin:8px auto 0; max-width:860px; color:#2d5269 }
+
+    .group{ margin:28px 0 }
+    .group h2{ font-size:18px; color:#cfefff; margin:0 0 12px 6px }
+
+    .product-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:18px }
+    .card{
+      position:relative; background:var(--card); border-radius:var(--radius); padding:10px;
+      box-shadow:var(--shadow); transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      overflow:hidden; display:flex; flex-direction:column; align-items:center; text-align:center
+    }
+    .card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-strong); background:rgba(255,255,255,0.08) }
+    .card a.block{ display:block; width:100% }
+    .card img{ border-radius:10px; width:100%; height:160px; object-fit:cover; display:block; transition: transform .22s ease }
+    .card:hover img{ transform:scale(1.03) }
+    .card h3{ font-size:15px; margin:10px 0 6px; color:#e7f7ff }
+    .card p{ font-size:13px; color:#c9d8e2; margin:0 6px 10px }
+
+    /* Blog/guide grids reuse card style */
+    .blog{ margin:36px 0; padding:22px; border-radius:12px; background:rgba(0,0,0,.32); box-shadow:0 8px 28px rgba(11,30,58,.12) }
+    .blog-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px }
+    .blog-card{ text-decoration:none; color:#073044; background:#fff; border-radius:12px; padding:0; overflow:hidden; box-shadow:0 6px 18px rgba(11,30,58,.18); transition: transform .18s ease, box-shadow .18s ease }
+    .blog-card:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(7,30,60,.22) }
+    .blog-card img{ width:100%; height:170px; object-fit:cover; display:block }
+    .blog-card .content{ padding:16px }
+    .blog-card h3{ margin:0 0 8px; font-size:18px; color:#073044 }
+    .blog-card p{ margin:0; color:#3a596c; font-size:14px; line-height:1.55 }
+    .read-more{ display:inline-block; margin-top:10px; font-weight:700; color:#0a5e86; text-decoration:none }
+
+    footer{ margin:26px 0 10px; padding:12px; text-align:center; color:#c6deec; font-size:13px; background:rgba(0,0,0,.35); border-radius:10px }
+
+    /* Bottom flying drone */
+    .bottom-drone-wrap{ position: fixed; left:0; right:0; bottom:24px; height:120px; pointer-events:none; z-index:900 }
+    .bottom-drone{ position:absolute; width:120px; height:70px; left:-160px; bottom:0; filter: drop-shadow(0 12px 28px rgba(0,20,40,.36)); animation: bottomLoop 38s ease-in-out infinite }
+    @keyframes bottomLoop{
+      0%   { transform: translateX(-160px) translateY(0) rotate(0deg); }
+      20%  { transform: translateX(12vw)   translateY(-12px) rotate(-4deg); }
+      40%  { transform: translateX(40vw)  translateY(-24px) rotate(3deg); }
+      60%  { transform: translateX(68vw)  translateY(-10px) rotate(-2deg); }
+      80%  { transform: translateX(100vw) translateY(-18px) rotate(2deg); }
+      100% { transform: translateX(-160px) translateY(0) rotate(0deg); }
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      padding-bottom: 60px;
-    }
-
-    /* ===== Header ===== */
-    header {
-      text-align: center;
-      padding: 40px 15px 10px;
-      color: #00bfff;
-      font-size: 2em;
-      font-weight: 700;
-    }
-
-    header p {
-      color: #ccc;
-      font-size: 1em;
-      margin-top: 5px;
-    }
-
-    /* ===== Section Titles ===== */
-    h2 {
-      text-align: center;
-      color: #00bfff;
-      margin-top: 80px;
-      font-size: 1.8em;
-    }
-
-    /* ===== Grid Layout ===== */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* ===== Card Style ===== */
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
-    }
-
-    .card img {
-      width: 100%;
-      display: block;
-    }
-
-    .card div {
-      padding: 20px;
-    }
-
-    .card h3 {
-      color: #00bfff;
-      margin-bottom: 10px;
-    }
-
-    .card a {
-      color: #00bfff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .card a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #ccc;
-      border-top: 2px solid #00bfff;
-      margin-top: 80px;
-    }
-
-    footer a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      header { font-size: 1.6em; }
-      .grid { gap: 20px; }
-      h2 { margin-top: 50px; }
+    @media (max-width:720px){
+      .card img{ height:140px }
+      .bottom-drone{ display:none }
+      .hero h1{ font-size:22px }
     }
   </style>
 </head>
-
 <body>
   <div class="parallax-bg">
     <div class="overlay">
+      <div class="site">
 
-      <!-- ===== Header ===== -->
-      <header>
-        <h1>DJI Gear Portal</h1>
-        <p>Your affiliate hub for DJI drones, cameras, and creative tools.</p>
-      </header>
-
-      <!-- ===== HOW-TO GUIDES ===== -->
-      <section id="guides">
-        <h2>How-To Guides</h2>
-        <div class="grid">
-          <div class="card">
-            <img src="images/howto.jpg" alt="How to Buy a Drone">
-            <div>
-              <h3>How to Buy a Drone</h3>
-              <p>Learn what features, sensors, and specs matter most before you buy.</p>
-              <a href="how-to-buy-a-drone.html">Read More →</a>
-            </div>
+        <!-- HEADER -->
+        <header>
+          <div class="brand">
+            <div class="logo-box">DJI<br/>GEAR</div>
+            <div><h2 class="site-title">DJI Gear Portal</h2></div>
           </div>
+          <nav class="top-nav" aria-label="Main navigation">
+            <a href="#drones">Drones</a>
+            <a href="#cameras">Cameras</a>
+            <a href="#audio">Audio</a>
+            <a href="#gimbals">Gimbals</a>
+            <a href="#guides">Guides</a>
+            <a href="#blog">Blog</a>
+          </nav>
+        </header>
 
-          <div class="card">
-            <img src="images/bg-drone.jpg" alt="Beginner Drone Guide">
-            <div>
-              <h3>Beginner Drone Guide</h3>
-              <p>Understand flight basics, safety, and setup tips.</p>
-              <a href="beginner-guide.html">Read More →</a>
+        <!-- HERO -->
+        <section class="hero" role="banner">
+          <h1>Guides & Blog for DJI Drones and Gear</h1>
+          <p>Quick buying guidance, industry use-cases, and direct links to official DJI products.</p>
+        </section>
+
+        <!-- DRONES -->
+        <section id="drones" class="group" aria-labelledby="drones-title">
+          <h2 id="drones-title">Drones</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mavic-4-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mavic4pro.jpg" alt="Mavic 4 Pro">
+              </a>
+              <h3>Mavic 4 Pro</h3>
+              <p>Pro-level aerial imaging and flight performance.</p>
             </div>
-          </div>
 
-          <div class="card">
-            <img src="images/comparison.jpg" alt="Drone Comparison">
-            <div>
-              <h3>Drone Comparison</h3>
-              <p>Compare DJI’s Mini, Air, and Mavic series side-by-side.</p>
-              <a href="comparison.html">Read More →</a>
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mini-4-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mini4pro.jpg" alt="Mini 4 Pro">
+              </a>
+              <h3>Mini 4 Pro</h3>
+              <p>Ultra-compact performance for creators on the move.</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ===== BLOG ARTICLES ===== -->
-      <section id="blog">
-        <h2>Blog Articles</h2>
-        <div class="grid">
-          <!-- Blog 1 -->
-          <div class="card">
-            <img src="images/blog-agriculture.jpg" alt="Drones in Agriculture">
-            <div>
-              <h3>DJI Drones in Agriculture</h3>
-              <p>Discover how DJI drones are transforming modern farming through smart mapping and crop monitoring.</p>
-              <a href="blog/drones-in-agriculture.html">Read More →</a>
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mini-3-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mini3pro.jpg" alt="Mini 3 Pro">
+              </a>
+              <h3>Mini 3 Pro</h3>
+              <p>Lightweight and travel-friendly with impressive imaging.</p>
             </div>
-          </div>
 
-          <!-- Blog 2 -->
-          <div class="card">
-            <img src="images/blog-roofing.jpg" alt="Drones for Roofing Contractors">
-            <div>
-              <h3>DJI Drones in Roofing</h3>
-              <p>See how roofing contractors use DJI drones for damage assessments and precise project estimates.</p>
-              <a href="blog/drones-for-roofing.html">Read More →</a>
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-inspire-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/inspire3.png" alt="Inspire 3">
+              </a>
+              <h3>Inspire 3</h3>
+              <p>High-end cinema aerial platform.</p>
             </div>
-          </div>
 
-          <!-- Blog 3 -->
-          <div class="card">
-            <img src="images/blog-realestate.jpg" alt="Drones for Real Estate">
-            <div>
-              <h3>DJI Drones in Real Estate</h3>
-              <p>Capture stunning aerials that help sell properties faster with DJI's advanced drone cameras.</p>
-              <a href="blog/drones-for-real-estate.html">Read More →</a>
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mini-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mini3.jpg" alt="Mini 3">
+              </a>
+              <h3>Mini 3</h3>
+              <p>Compact, simple, reliable—great first drone.</p>
             </div>
-          </div>
 
-          <!-- Blog 4 -->
-          <div class="card">
-            <img src="images/blog-construction.jpg" alt="Drones in Construction">
-            <div>
-              <h3>DJI Drones in Construction</h3>
-              <p>Learn how DJI drones improve mapping, inspections, and safety across infrastructure projects.</p>
-              <a href="blog/drones-in-construction.html">Read More →</a>
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-air-3s?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/air3s.jpg" alt="DJI Air 3S">
+              </a>
+              <h3>DJI Air 3S</h3>
+              <p>Dual-camera coverage and long flight time for everyday work.</p>
             </div>
-          </div>
 
-          <!-- Blog 5 (NEW) -->
-          <div class="card">
-            <img src="images/droneconstruction.jpg" alt="DJI Drones in Construction & Infrastructure">
-            <div>
-              <h3>DJI Drones in Construction & Infrastructure</h3>
-              <p>Explore how DJI drones like the Mavic 4 Pro, Air 3S, and Inspire 3 transform construction safety, mapping, and project efficiency.</p>
-              <a href="blog/drones-in-construction.html">Read More →</a>
+          </div>
+        </section>
+
+        <!-- CAMERAS & ACTION -->
+        <section id="cameras" class="group" aria-labelledby="cameras-title">
+          <h2 id="cameras-title">Cameras & Action Gear</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-osmo-pocket-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/pocket3.jpg" alt="Osmo Pocket 3">
+              </a>
+              <h3>Osmo Pocket 3</h3>
+              <p>Handheld pocket camera with pro features.</p>
             </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/osmo-action-4?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/action4a.jpg" alt="Osmo Action 4">
+              </a>
+              <h3>Osmo Action 4</h3>
+              <p>Next-gen action cam for outdoor pros.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/osmo-mobile-7p?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mobile7p.jpg" alt="Osmo Mobile 7P">
+              </a>
+              <h3>Osmo Mobile 7P</h3>
+              <p>Portable smartphone gimbal for silky footage.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/osmo-action-5-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/action5pro.jpg" alt="Osmo Action 5 Pro">
+              </a>
+              <h3>Osmo Action 5 Pro</h3>
+              <p>Rugged, pro-grade action camera.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/osmo-360-standard-combo?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/osmo360.jpg" alt="Osmo 360 Standard Combo">
+              </a>
+              <h3>Osmo 360 Standard Combo</h3>
+              <p>Immersive 360° capture with advanced stabilization.</p>
+            </div>
+
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- ===== FOOTER ===== -->
-      <footer>
-        <p>&copy; <span id="year"></span> DJI Gear Portal — Affiliate links to official DJI products.</p>
-        <p><a href="#guides">Back to Top ↑</a></p>
-      </footer>
+        <!-- AUDIO -->
+        <section id="audio" class="group" aria-labelledby="audio-title">
+          <h2 id="audio-title">Audio Equipment</h2>
+          <div class="product-grid">
 
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mic-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mic3.jpg" alt="DJI Mic 3">
+              </a>
+              <h3>DJI Mic 3 (2TX + 1RX)</h3>
+              <p>Pro wireless microphone kit.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-mic-2?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mic2.jpg" alt="DJI Mic 2">
+              </a>
+              <h3>DJI Mic 2</h3>
+              <p>Reliable wireless mic kit (2TX + 1RX).</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GIMBALS -->
+        <section id="gimbals" class="group" aria-labelledby="gimbals-title">
+          <h2 id="gimbals-title">Gimbals & Stabilizers</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-rs-4-mini?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs4mini.jpg" alt="DJI RS 4 Mini">
+              </a>
+              <h3>DJI RS 4 Mini</h3>
+              <p>Lightweight gimbal for hybrid shooters.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-rs-4-ronin-4d?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs4ronin.jpg" alt="DJI RS 4 / Ronin 4D">
+              </a>
+              <h3>DJI RS 4 / Ronin 4D</h3>
+              <p>Professional stabilizers & cinema systems.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/dji-rs-3-mini?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs3mini.jpg" alt="DJI RS 3 Mini">
+              </a>
+              <h3>DJI RS 3 Mini</h3>
+              <p>Compact stabilizer for solo creators.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/ca/product/ronin-sc?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/roninsc.jpg" alt="Ronin-SC">
+              </a>
+              <h3>Ronin-SC</h3>
+              <p>Light stabilizer for mirrorless shooters.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GUIDES -->
+        <section id="guides" class="blog" aria-labelledby="guides-title">
+          <h2 id="guides-title" style="margin:0 0 12px 6px; color:#e7f7ff;">DJI Drone Guides</h2>
+          <div class="blog-grid">
+            <a class="blog-card" href="how-to-buy-a-drone.html">
+              <img src="images/howto.jpg" alt="How to Buy a Drone">
+              <div class="content">
+                <h3>How To Buy A Drone</h3>
+                <p>Understand types, brands, safety, laws, and accessories — pick the drone that fits your goals.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="comparison.html">
+              <img src="images/comparison.jpg" alt="Drone Comparison Guide">
+              <div class="content">
+                <h3>Drone Comparison: Which One Is Right for You?</h3>
+                <p>Compare Mini, Mavic, Air, and Inspire lineups to find your perfect fit for content, travel, and pro work.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" class="blog" aria-labelledby="blog-title">
+          <h2 id="blog-title" style="margin:0 0 12px 6px; color:#e7f7ff;">Blog Articles</h2>
+          <div class="blog-grid">
+            <a class="blog-card" href="blog/drones-in-agriculture.html">
+              <img src="images/blog-agriculture.jpg" alt="DJI Drones in Agriculture">
+              <div class="content">
+                <h3>DJI Drones in Agriculture</h3>
+                <p>How DJI’s platforms support mapping, scouting, and data-driven crop decisions.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-for-roofing.html">
+              <img src="images/blog-roofing.jpg" alt="DJI Drones in Roofing">
+              <div class="content">
+                <h3>DJI Drones in Roofing</h3>
+                <p>Faster estimates, safer inspections, clearer documentation for roofing contractors.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-for-real-estate.html">
+              <img src="images/blog-realestate.jpg" alt="DJI Drones in Real Estate">
+              <div class="content">
+                <h3>DJI Drones in Real Estate</h3>
+                <p>Win listings and sell faster with high-impact aerial imagery and video.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-in-construction.html">
+              <img src="images/blog-construction.jpg" alt="DJI Drones in Construction">
+              <div class="content">
+                <h3>DJI Drones in Construction</h3>
+                <p>Improve mapping, inspections, and safety across infrastructure projects.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <!-- NEW: Construction & Infrastructure (top image you provided) -->
+            <a class="blog-card" href="blog/drones-in-construction.html">
+              <img src="images/droneconstruction.jpg" alt="DJI Drones in Construction & Infrastructure">
+              <div class="content">
+                <h3>DJI Drones in Construction & Infrastructure</h3>
+                <p>Mavic 4 Pro, Air 3S, and Inspire 3 for high-accuracy mapping, safer inspections, and faster progress tracking.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer>
+          <small>© <span id="year"></span> DJI Gear Portal — affiliate website. We link to official DJI product pages.</small>
+        </footer>
+      </div>
     </div>
+  </div>
+
+  <!-- Bottom flying drone loop -->
+  <div class="bottom-drone-wrap" aria-hidden="true">
+    <img class="bottom-drone" src="images/drone.png" alt="flying drone">
   </div>
 
   <script>
