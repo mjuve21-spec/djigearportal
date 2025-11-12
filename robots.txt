@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mjuve21-spec.github.io/djigearportal/sitemap.xml
+Sitemap: https://djigearportal.com/sitemap.xml
+
