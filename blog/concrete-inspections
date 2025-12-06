@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drone-Based Concrete Structure Inspections</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Drone-Based Concrete Structure Inspections</h1>
+  </header>
+
+  <section class="blog-post">
+    <img src="../images/concrete-inspection.jpg" alt="Drone inspecting concrete structure" class="blog-image" />
+
+    <h2>Safer, Faster, and More Accurate Concrete Inspections</h2>
+    <p>
+      Concrete structures—including bridges, tunnels, towers, and high-rise buildings—require ongoing inspection to detect cracking, spalling, structural wear, and moisture intrusion. Traditional inspections are time-consuming and often dangerous, requiring scaffolding or rope access.
+    </p>
+
+    <p>
+      Drones eliminate these risks. Equipped with high-resolution cameras, zoom lenses, and thermal sensors, UAVs can locate micro-cracks and subsurface issues without putting workers in harm’s way.
+    </p>
+
+    <h2>Key Benefits</h2>
+    <ul>
+      <li>High-resolution imagery for crack and defect detection</li>
+      <li>Thermal analysis for moisture and delamination</li>
+      <li>No scaffolding or lift equipment needed</li>
+      <li>Lower inspection costs and downtime</li>
+      <li>Detailed reports with repeatable digital records</li>
+    </ul>
+
+    <h2>Industries That Rely on Drone Concrete Inspections</h2>
+    <ul>
+      <li>Construction companies</li>
+      <li>Civil engineering firms</li>
+      <li>Municipalities and governments</li>
+      <li>Infrastructure management organizations</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      Drone-based concrete inspections offer unmatched efficiency and reliability. As UAV imaging technology continues to advance, drone inspections are quickly becoming the industry standard for structural assessment.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DJI Gear Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
