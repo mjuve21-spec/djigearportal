@@ -1,4 +1,4 @@
-/* ===== GLOBAL STYLES ===== */
+/* ======================= GLOBAL STYLES ======================= */
 body {
   margin: 0;
   padding: 0;
@@ -15,25 +15,16 @@ h1, h2, h3 {
   margin-top: 1.5rem;
 }
 
-h1 {
-  font-size: 2.2rem;
-}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
 
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-/* ===== PARAGRAPHS ===== */
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-/* ===== BLOG CARDS (HOMEPAGE) ===== */
+/* ======================= BLOG CARDS (HOMEPAGE) ======================= */
 .blog-card {
   background: #ffffff;
   border-radius: 12px;
@@ -45,102 +36,4 @@ p {
 
 .blog-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.blog-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.blog-card a {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 18px;
-  background-color: #0077ff;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.blog-card a:hover {
-  background-color: #005fcc;
-  transform: translateY(-2px);
-}
-
-/* ===== BLOG POST PAGE ===== */
-.blog-post {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.blog-post img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 20px;
-}
-
-/* ===== LINKS INSIDE POST ===== */
-.blog-post a {
-  color: #0077ff;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.blog-post a:hover {
-  color: #005fcc;
-}
-/* ===== Fix unwanted blue boxes and outlines ===== */
-a {
-  outline: none;  /* removes default blue focus box */
-}
-
-.blog-post, .blog-card {
-  border: none;   /* removes any unexpected border/box */
-}
-
-/* Optional: subtle focus for accessibility */
-a:focus {
-  outline: 2px solid #0077ff; 
-  outline-offset: 2px;
-}
-/* ===== Remove default blue outline/focus box ===== */
-a:focus, a:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.blog-post a, .blog-card a {
-    outline: none !important;
-    box-shadow: none !important;
-}
-/* ===== GLOBAL BLOG POST / CARD RESET ===== */
-.blog-post,
-.blog-card {
-    border: none !important;      /* remove any borders */
-    outline: none !important;     /* remove blue outline */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);  /* consistent shadow */
-}
-
-/* Remove any focus/active outline for links inside posts/cards */
-.blog-post a:focus,
-.blog-post a:active,
-.blog-card a:focus,
-.blog-card a:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Optional: subtle hover effect for cards */
-.blog-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
+  box-shadow:
