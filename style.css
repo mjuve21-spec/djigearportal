@@ -121,3 +121,26 @@ a:focus, a:active {
     outline: none !important;
     box-shadow: none !important;
 }
+/* ===== GLOBAL BLOG POST / CARD RESET ===== */
+.blog-post,
+.blog-card {
+    border: none !important;      /* remove any borders */
+    outline: none !important;     /* remove blue outline */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);  /* consistent shadow */
+}
+
+/* Remove any focus/active outline for links inside posts/cards */
+.blog-post a:focus,
+.blog-post a:active,
+.blog-card a:focus,
+.blog-card a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Optional: subtle hover effect for cards */
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
