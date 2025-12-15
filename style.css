@@ -36,28 +36,64 @@ p {
 
 .blog-card:hover {
   transform: translateY(-4px);
-  box-shadow:
-/* ===== Blog post images ===== */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* ======================= BLOG POST ======================= */
+.blog-post {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
 .blog-post img {
   width: 100%;
   border-radius: 14px;
   margin-bottom: 20px;
-  display: block;         
-  cursor: pointer;       /* makes cursor a hand over the image */
-  transition: transform 0.25s ease; /* subtle hover effect */
+  display: block;
+  cursor: pointer;           /* makes cursor a hand */
+  transition: transform 0.25s ease; /* hover zoom effect */
 }
 
 .blog-post img:hover {
-  transform: scale(1.02);  /* slight zoom on hover */
+  transform: scale(1.02);     /* subtle zoom on hover */
 }
 
-
-/* ===== Clickable images ===== */
-.blog-post a img {
-  cursor: pointer;        /* pointer when image is a link */
-  transition: transform 0.25s ease;
+/* ======================= BUTTONS & LINKS ======================= */
+.blog-card a,
+.blog-post a.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #0077ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 2px solid #0077ff;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.blog-post a img:hover {
-  transform: scale(1.02);  /* subtle hover effect for linked images */
+.blog-card a:hover,
+.blog-post a.button:hover {
+  background-color: #ffffff;
+  color: #0077ff;
+  transform: translateY(-2px);
+}
+
+/* ======================= REMOVE FOCUS OUTLINES ======================= */
+a:focus, a:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
