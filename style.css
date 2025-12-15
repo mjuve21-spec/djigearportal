@@ -37,3 +37,21 @@ p {
 .blog-card:hover {
   transform: translateY(-4px);
   box-shadow:
+/* ===== Blog post images ===== */
+.blog-post img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  display: block;         /* ensures spacing is consistent */
+  cursor: default;        /* default cursor for non-clickable images */
+}
+
+/* ===== Clickable images ===== */
+.blog-post a img {
+  cursor: pointer;        /* pointer when image is a link */
+  transition: transform 0.25s ease;
+}
+
+.blog-post a img:hover {
+  transform: scale(1.02);  /* subtle hover effect for linked images */
+}
