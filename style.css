@@ -97,3 +97,17 @@ p {
 .blog-post a:hover {
   color: #005fcc;
 }
+/* ===== Fix unwanted blue boxes and outlines ===== */
+a {
+  outline: none;  /* removes default blue focus box */
+}
+
+.blog-post, .blog-card {
+  border: none;   /* removes any unexpected border/box */
+}
+
+/* Optional: subtle focus for accessibility */
+a:focus {
+  outline: 2px solid #0077ff; 
+  outline-offset: 2px;
+}
