@@ -110,3 +110,17 @@ a:focus, a:active {
 .blog-post img {
   cursor: pointer !important;
 }
+/* === FIREFOX FINAL FIX === */
+
+/* Remove focus outline from links wrapping images */
+.blog-post a:focus,
+.blog-post a:focus-visible,
+.blog-post a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Force pointer on images even if wrapped */
+.blog-post a img {
+  cursor: pointer !important;
+}
