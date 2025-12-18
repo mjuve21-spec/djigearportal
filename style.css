@@ -97,3 +97,16 @@ a:focus, a:active {
     outline: none !important;
     box-shadow: none !important;
 }
+/* === FINAL IMAGE FIX FOR BLOG POSTS === */
+
+/* remove Firefox focus outline (blue box) */
+.blog-post img:focus,
+.blog-post img:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* force hand cursor on blog images */
+.blog-post img {
+  cursor: pointer !important;
+}
