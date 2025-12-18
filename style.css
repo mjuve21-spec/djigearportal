@@ -124,3 +124,10 @@ a:focus, a:active {
 .blog-post a img {
   cursor: pointer !important;
 }
+/* === FIREFOX HARD STOP: REMOVE ALL FOCUS RINGS === */
+*:focus,
+*:focus-visible,
+*:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
