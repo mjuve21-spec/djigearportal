@@ -91,5 +91,33 @@ p {
   color: #0077ff;
   transform: translateY(-2px);
 }
+/* === REMOVE FOCUS RING FROM READ MORE LINKS ONLY === */
+.read-more:focus,
+.read-more:focus-visible,
+.read-more:active {
+  outline: none;
+  box-shadow: none;
+}
+/* === READ MORE BUTTON (FINAL) === */
+.read-more {
+  background-color: #0077ff;
+  color: #ffffff;
+  border: 2px solid #0077ff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
 
+.read-more:hover {
+  background-color: #ffffff;
+  color: #0077ff;
+  transform: translateY(-2px);
+}
 
+.read-more:focus,
+.read-more:active {
+  outline: none;
+  box-shadow: none;
+}
