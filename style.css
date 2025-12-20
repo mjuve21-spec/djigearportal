@@ -92,42 +92,4 @@ p {
   transform: translateY(-2px);
 }
 
-/* ======================= REMOVE FOCUS OUTLINES ======================= */
-a:focus, a:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-/* === FINAL IMAGE FIX FOR BLOG POSTS === */
 
-/* remove Firefox focus outline (blue box) */
-.blog-post img:focus,
-.blog-post img:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* force hand cursor on blog images */
-.blog-post img {
-  cursor: pointer !important;
-}
-/* === FIREFOX FINAL FIX === */
-
-/* Remove focus outline from links wrapping images */
-.blog-post a:focus,
-.blog-post a:focus-visible,
-.blog-post a:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Force pointer on images even if wrapped */
-.blog-post a img {
-  cursor: pointer !important;
-}
-/* === FIREFOX HARD STOP: REMOVE ALL FOCUS RINGS === */
-*:focus,
-*:focus-visible,
-*:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
