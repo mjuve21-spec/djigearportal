@@ -159,3 +159,6 @@ p {
   position: relative;
   z-index: 5;
 }
+.blog-card a:focus-visible {
+  outline: none;
+}
