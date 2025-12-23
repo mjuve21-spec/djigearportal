@@ -170,3 +170,16 @@ p {
 .blog-image-link:active {
   outline: none;
 }
+/* FINAL OVERRIDE — REMOVE BLUE BOX FROM HERO IMAGE LINK */
+.blog-image-link {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.blog-image-link img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
