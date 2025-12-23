@@ -162,3 +162,11 @@ p {
 .blog-card a:focus-visible {
   outline: none;
 }
+.blog-image-link {
+  display: block;
+}
+
+.blog-image-link:focus,
+.blog-image-link:active {
+  outline: none;
+}
