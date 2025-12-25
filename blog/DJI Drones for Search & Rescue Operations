@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJI Drones for Search & Rescue Operations - DJI Gear Portal</title>
+  <meta name="description" content="Learn how DJI drones help search and rescue teams find missing persons faster and save lives in emergency situations.">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f4f6f9;
+      color: #333;
+    }
+    h1 {
+      color: #073044;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #0a5e86;
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .cta-box {
+      background: #e8f4f8;
+      border-left: 4px solid #0a5e86;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+    .cta-box h3 {
+      margin-top: 0;
+      color: #073044;
+    }
+    .btn {
+      display: inline-block;
+      background: #0a5e86;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #073044;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DJI Drones for Search & Rescue Operations</h1>
+  
+  <img src="../images/search-rescue-drone.jpg" alt="DJI drone assisting in search and rescue operation" class="hero-image">
+
+  <p>When someone goes missing in the wilderness or after a natural disaster, every minute counts. Traditional search and rescue operations can take hours or even days, requiring large teams to cover vast areas on foot. But today, DJI drones are changing the game by helping rescue teams find missing persons faster and more efficiently than ever before.</p>
+
+  <h2>Why Search and Rescue Teams Use Drones</h2>
+
+  <p>Search and rescue operations face serious challenges. Terrain can be rugged, dangerous, or difficult to access. Weather conditions might be poor. Visibility can be limited, especially at night. And most importantly, time is critical when someone's life is on the line.</p>
+
+  <p>Drones solve many of these problems. A DJI drone can cover large areas quickly, flying over terrain that would take search teams hours to walk through. They can access areas that are too dangerous for people to enter, like cliff edges, dense forests, or unstable ground. And with thermal cameras, they can even spot heat signatures in complete darkness.</p>
+
+  <h2>How DJI Drones Help Save Lives</h2>
+
+  <p>Modern DJI drones come equipped with powerful cameras that can spot details from high above. The regular camera provides a bird's eye view of the search area, making it easier to spot a person, their clothing, or signs of their movement like footprints or disturbed vegetation.</p>
+
+  <p>But the real game-changer is thermal imaging. Some DJI drones, like the Mavic series and the Matrice line, can be equipped with thermal cameras. These cameras detect heat, which means they can find a warm body even in thick brush, at night, or in foggy conditions where regular cameras would be useless.</p>
+
+  <p>The drone can fly a search pattern over an area in a fraction of the time it would take a ground team. The operator watches the live video feed, and when they spot something, they can mark the GPS coordinates and direct rescue teams exactly where to go. This saves precious time and focuses resources where they're needed most.</p>
+
+  <h2>Real-World Success Stories</h2>
+
+  <p>Search and rescue teams around the world have already used drones to find missing hikers, locate lost children, and assist in disaster response. In mountain rescue operations, drones have spotted stranded climbers on ledges that were invisible from the ground. After hurricanes and floods, drones have helped identify people trapped on rooftops waiting for help.</p>
+
+  <p>The speed advantage is enormous. What might take a search team with dogs several hours to cover on foot, a drone can survey in minutes. This doesn't replace ground teams but it makes them far more effective by telling them exactly where to look.</p>
+
+  <h2>Key Features Search Teams Need</h2>
+
+  <p>Not every drone is suitable for search and rescue work. The best drones for this job need several important features. Long flight time is critical because search operations can take hours. The ability to see in low light or complete darkness through thermal imaging is essential for nighttime searches. A good zoom camera helps identify details from a safe distance. And reliable GPS and obstacle avoidance help pilots focus on the search rather than worrying about crashing.</p>
+
+  <p>Drones also need to handle wind and weather. Search operations don't wait for perfect conditions. A drone that can fly safely in moderate wind and light rain is far more useful than one that only works on calm, sunny days.</p>
+
+  <h2>Which DJI Drones Work Best for Search and Rescue</h2>
+
+  <p>Several DJI drones are particularly well-suited for search and rescue operations. The DJI Mavic 4 Pro offers excellent camera quality and portability, making it easy for teams to carry into the field. Its long flight time means more area covered per battery. For teams that need thermal imaging, the Mavic 4 Pro with thermal capabilities provides both regular and heat-detecting cameras in one package.</p>
+
+  <p>For professional rescue organizations, the DJI Matrice series provides industrial-grade reliability with interchangeable cameras and payloads. These drones can carry thermal cameras, zoom cameras, or even spotlights for nighttime operations.</p>
+
+  <h2>Beyond Finding Missing Persons</h2>
+
+  <p>Search and rescue drones do more than just find people. They can assess dangerous situations before teams enter, checking for hazards like unstable terrain, downed power lines, or flooding. They can deliver small emergency supplies to someone who's been located but is difficult to reach immediately. And they provide valuable documentation of the scene for after-action reports and training.</p>
+
+  <p>In avalanche rescue, drones can quickly scan debris fields looking for signs of buried victims. In water rescue, they can spot swimmers in distress far from shore. The applications continue to grow as teams discover new ways to use this technology.</p>
+
+  <h2>Training and Preparation</h2>
+
+  <p>Using drones effectively for search and rescue requires training and practice. Pilots need to understand how to fly search patterns efficiently, how to interpret thermal imagery, and how to coordinate with ground teams. Many rescue organizations now include drone training as part of their standard emergency response preparation.</p>
+
+  <p>The technology is becoming more accessible and easier to use. Modern DJI drones have intelligent flight modes that can automate search patterns, making it simpler for operators to focus on watching the video feed rather than manually controlling every movement.</p>
+
+  <div class="cta-box">
+    <h3>Ready to Explore DJI's Search and Rescue Solutions?</h3>
+    <p>If you're part of a search and rescue team or interested in supporting emergency response efforts, DJI offers drones specifically designed for these critical missions. From portable options like the Mavic 4 Pro to professional solutions like the Matrice series, there's a drone built to help save lives.</p>
+    <a href="https://store.dji.com/ca/product/dji-mavic-4-pro?clickpid=6910618" class="btn" target="_blank" rel="noopener">Explore DJI Mavic 4 Pro</a>
+  </div>
+
+  <h2>The Future of Drone-Assisted Rescue</h2>
+
+  <p>As drone technology continues to advance, we'll see even more capabilities that help rescue teams. Better battery life means longer searches without returning to base. Improved AI could help drones automatically detect people in images, alerting operators immediately. Better night vision and thermal cameras will make finding people in difficult conditions even easier.</p>
+
+  <p>Some rescue organizations are already experimenting with drones that can carry and deploy rescue equipment, communicate with lost individuals through speakers, or even provide light to guide ground teams through darkness.</p>
+
+  <p>The bottom line is simple: DJI drones are helping search and rescue teams find people faster, work more safely, and ultimately save more lives. In emergency situations where every second matters, that's technology worth having.</p>
+
+  <p><a href="../index.html">← Back to Blog</a></p>
+
+</body>
+</html>
