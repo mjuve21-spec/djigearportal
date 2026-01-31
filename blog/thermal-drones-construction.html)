@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermal Drones for Construction: Use Cases, Limits, and Best DJI Options</title>
+  <meta name="description" content="Learn how thermal-style drone workflows are used in construction for heat loss detection, moisture issues, and site analysis — and which DJI drones are suitable for these tasks.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="container" style="max-width:1100px; margin:auto;">
+
+    <img src="../images/thermal-drone-inspection-dji.jpg"
+         alt="Drone inspecting a construction site for heat loss using thermal-style analysis"
+         style="width:100%; border-radius:10px; margin-bottom:20px;">
+
+    <h1>Thermal Drones for Construction</h1>
+    <p><em>By DJI Gear Portal — Affiliate Blog</em></p>
+
+    <p>
+      Thermal drones are increasingly discussed in the construction industry as tools
+      for identifying heat loss, moisture intrusion, and energy inefficiencies.
+      While true thermal imaging requires specialized sensors, many construction
+      professionals use DJI consumer drones as part of a broader inspection and
+      documentation workflow.
+    </p>
+
+    <p>
+      This article explains how thermal-style inspections are used in construction,
+      what they can and cannot do, and which DJI drones available on DJI Gear Portal
+      are best suited for construction professionals.
+    </p>
+
+    <h2>How Thermal Imaging Is Used in Construction</h2>
+
+    <p>
+      In construction, thermal imaging is most commonly associated with identifying
+      temperature differences across building materials. These temperature variations
+      can reveal problems that are difficult or impossible to see with the naked eye.
+    </p>
+
+    <h3>Common Construction Use Cases</h3>
+    <ul>
+      <li>Detecting heat loss in building envelopes</li>
+      <li>Identifying missing or damaged insulation</li>
+      <li>Locating moisture intrusion behind walls or roofing systems</li>
+      <li>Inspecting flat roofs before and after installation</li>
+      <li>Monitoring solar panel performance on commercial buildings</li>
+      <li>Supporting energy audits and retrofit planning</li>
+    </ul>
+
+    <p>
+      On large construction sites, drones allow inspectors to gather this data
+      quickly and safely, reducing the need for scaffolding, lifts, or roof access.
+    </p>
+
+    <h2>Understanding the Limitations</h2>
+
+    <p>
+      It is important to understand that most consumer DJI drones do not include
+      dedicated thermal sensors. Instead, they are often used to:
+    </p>
+
+    <ul>
+      <li>Capture high-resolution visual data for comparison</li>
+      <li>Document problem areas identified by handheld thermal cameras</li>
+      <li>Provide visual context for energy consultants and inspectors</li>
+      <li>Create repeatable inspection records over time</li>
+    </ul>
+
+    <p>
+      For many construction companies, this hybrid approach is more affordable and
+      still highly effective when combined with professional thermal analysis tools.
+    </p>
+
+    <h2>Best DJI Drones for Construction Workflows</h2>
+
+    <p>
+      The following DJI drones are commonly used on construction sites for inspection,
+      documentation, and analysis. All models listed below are available through
+      DJI Gear Portal affiliate links.
+    </p>
+
+    <h3>DJI Mavic Pro</h3>
+    <p>
+      The DJI Mavic Pro remains a reliable choice for construction professionals
+      who need stable flight performance and strong image quality. Its longer
+      flight time and obstacle avoidance make it suitable for complex job sites.
+    </p>
+    <p><strong>Best for:</strong> Roof inspections, large site documentation, progress tracking</p>
+
+    <h3>DJI Mini 4 Pro</h3>
+    <p>
+      Lightweight and highly portable, the Mini 4 Pro is ideal for quick inspections
+      and smaller construction projects. Its advanced camera system provides
+      excellent visual detail for identifying surface-level issues.
+    </p>
+    <p><strong>Best for:</strong> Residential builds, quick site checks, urban projects</p>
+
+    <h3>DJI Mini 5 Pro</h3>
+    <p>
+      The Mini 5 Pro offers improved imaging and tracking features while remaining
+      under key regulatory weight thresholds. This makes it a practical option for
+      contractors who need flexibility across multiple sites.
+    </p>
+    <p><strong>Best for:</strong> Travel-heavy contractors, inspections across multiple locations</p>
+
+    <h2>Why Drones Matter for Construction Inspections</h2>
+
+    <p>
+      Even without onboard thermal sensors, DJI drones provide significant value
+      in construction environments:
+    </p>
+
+    <ul>
+      <li>Improved worker safety by reducing roof and ladder access</li>
+      <li>Faster inspection timelines</li>
+      <li>Clear visual documentation for clients and stakeholders</li>
+      <li>Repeatable data collection throughout the build lifecycle</li>
+    </ul>
+
+    <p>
+      When paired with professional thermal reports, drone imagery helps construction
+      teams clearly explain issues and justify repair or retrofit decisions.
+    </p>
+
+    <h2>Regulatory and Professional Considerations</h2>
+
+    <p>
+      Contractors using drones for inspection should always comply with local
+      aviation regulations and understand that thermal analysis often requires
+      trained interpretation. Drones are tools for data collection — not replacements
+      for certified inspectors.
+    </p>
+
+    <h2>Final Thoughts</h2>
+
+    <p>
+      Thermal drones are becoming an important part of modern construction workflows.
+      While true thermal imaging requires specialized equipment, DJI drones play
+      a critical role in inspection support, documentation, and site analysis.
+    </p>
+
+    <p>
+      For construction professionals looking to improve safety, efficiency, and
+      reporting quality, DJI drones such as the Mavic Pro, Mini 4 Pro, and Mini 5 Pro
+      offer practical and cost-effective solutions.
+    </p>
+
+    <h2>Sources & Credits</h2>
+    <ul>
+      <li>DJI official product documentation and specifications</li>
+      <li>ASHRAE building energy efficiency guidelines</li>
+      <li>U.S. Department of Energy — building envelope and thermal inspection resources</li>
+      <li>Industry best practices from construction inspection professionals</li>
+    </ul>
+
+    <footer style="margin-top:40px;">
+      <p><small>Affiliate disclaimer: Purchases made through DJI Gear Portal links may earn a commission at no additional cost to you.</small></p>
+    </footer>
+
+  </div>
+</body>
+</html>
