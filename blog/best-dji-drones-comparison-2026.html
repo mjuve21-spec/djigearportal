@@ -1,767 +1,960 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJI Drones Comparison 2026: Which Model Is Right for You? | Updated Guide</title>
-    <meta name="description" content="Complete DJI drones comparison 2026. Compare specs, prices, and features of every DJI drone model. Expert buying guide helps you choose the perfect drone.">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #1a1a2e;
-            --accent: #0f3460;
-            --highlight: #16213e;
-            --bright: #e94560;
-            --text: #1a1a1a;
-            --text-light: #666;
-            --bg: #f8f9fa;
-            --card: #ffffff;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-        
-        .header .subtitle {
-            font-size: 20px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-        
-        .last-updated {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .hero-image {
-            width: 100%;
-            max-height: 500px;
-            overflow: hidden;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        
-        .intro {
-            background: var(--card);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .intro h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .intro p {
-            font-size: 17px;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-        
-        .comparison-matrix {
-            background: var(--card);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            overflow-x: auto;
-        }
-        
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 30px;
-            color: var(--primary);
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 800px;
-        }
-        
-        thead {
-            background: var(--primary);
-            color: white;
-        }
-        
-        th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        tbody tr:hover {
-            background: #f5f5f5;
-        }
-        
-        .model-column {
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .price-tag {
-            font-weight: 700;
-            color: var(--bright);
-            font-size: 18px;
-        }
-        
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .comparison-card {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .comparison-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .comparison-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .vs-badge {
-            display: inline-block;
-            background: var(--bright);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .feature-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-name {
-            font-weight: 500;
-            color: var(--text-light);
-        }
-        
-        .feature-value {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        .winner-badge {
-            display: inline-block;
-            background: #4caf50;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: 700;
-            margin-left: 8px;
-        }
-        
-        .buying-guide {
-            background: linear-gradient(135deg, var(--highlight) 0%, var(--primary) 100%);
-            color: white;
-            padding: 50px 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-        }
-        
-        .buying-guide h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            margin-bottom: 25px;
-        }
-        
-        .buying-guide .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .guide-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .guide-item h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        
-        .guide-item p {
-            font-size: 15px;
-            line-height: 1.7;
-            opacity: 0.95;
-        }
-        
-        .key-differences {
-            background: var(--card);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .difference-item {
-            padding: 25px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .difference-item:last-child {
-            border-bottom: none;
-        }
-        
-        .difference-item h3 {
-            font-size: 22px;
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        
-        .difference-item p {
-            color: var(--text-light);
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        
-        .cta-box {
-            background: var(--bright);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        .cta-box h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-        
-        .cta-box p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            opacity: 0.95;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--bright);
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-        
-        .shop-link {
-            color: var(--bright);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .shop-link:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
-            }
-            
-            .section-title {
-                font-size: 24px;
-            }
-            
-            .comparison-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Best DJI Drones Comparison 2026 – Complete Buyer's Guide with Specs</title>
+
+  <meta name="description" content="Complete DJI drones comparison 2026. Compare specs, camera quality, flight time, and real-world performance. Expert recommendations for beginners, travelers, and professionals.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --primary:#1a1a2e;
+      --accent:#0f3460;
+      --highlight:#16213e;
+      --bright:#e94560;
+      --text:#1a1a1a;
+      --text-light:#666;
+      --bg:#f8f9fa;
+      --card:#ffffff;
+    }
+
+    body {
+      font-family:Inter,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    header {
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      color:#fff;
+      text-align:center;
+      padding:80px 20px;
+    }
+
+    header h1 {
+      font-family:Montserrat,sans-serif;
+      font-size:48px;
+      font-weight:900;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    header p {
+      font-size:22px;
+      max-width:850px;
+      margin:0 auto 30px;
+      opacity:.95;
+    }
+
+    .updated {
+      display:inline-block;
+      background:rgba(255,255,255,.2);
+      padding:10px 24px;
+      border-radius:20px;
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .hero img {
+      width:100%;
+      display:block;
+      max-height:520px;
+      object-fit:cover;
+    }
+
+    .container {
+      max-width:1200px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    section {
+      background:var(--card);
+      padding:50px;
+      border-radius:14px;
+      margin-bottom:50px;
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+    }
+
+    h2 {
+      font-family:Montserrat,sans-serif;
+      font-size:36px;
+      color:var(--primary);
+      margin-bottom:30px;
+      margin-top:40px;
+    }
+
+    h2:first-child {
+      margin-top:0;
+    }
+
+    h3 {
+      font-family:Montserrat,sans-serif;
+      font-size:26px;
+      color:var(--primary);
+      margin-top:35px;
+      margin-bottom:20px;
+    }
+
+    h4 {
+      font-family:Montserrat,sans-serif;
+      font-size:22px;
+      color:var(--accent);
+      margin-top:25px;
+      margin-bottom:15px;
+    }
+
+    p {
+      font-size:18px;
+      color:var(--text-light);
+      margin-bottom:20px;
+      line-height:1.8;
+    }
+
+    strong {
+      color:var(--text);
+      font-weight:600;
+    }
+
+    ul, ol {
+      margin:20px 0 20px 30px;
+      color:var(--text-light);
+    }
+
+    li {
+      margin-bottom:12px;
+      line-height:1.7;
+    }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin:30px 0;
+      font-size:16px;
+    }
+
+    th {
+      background:var(--primary);
+      color:#fff;
+      padding:16px;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      text-align:left;
+      font-weight:600;
+    }
+
+    td {
+      padding:16px;
+      border-bottom:1px solid #e0e0e0;
+    }
+
+    tr:hover { background:#f5f5f5; }
+
+    .model { font-weight:700; color:var(--primary); font-size:17px; }
+
+    .price { font-weight:800; color:var(--bright); font-size:18px; }
+
+    .btn {
+      text-decoration:none;
+      color:#fff;
+      background:var(--bright);
+      padding:14px 32px;
+      border-radius:25px;
+      font-weight:700;
+      display:inline-block;
+      transition:.3s;
+      font-size:16px;
+    }
+
+    .btn:hover { transform:scale(1.05); }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      margin:30px 0;
+    }
+
+    .card {
+      background:var(--card);
+      border-radius:14px;
+      padding:35px;
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      border:2px solid #f0f0f0;
+    }
+
+    .badge {
+      display:inline-block;
+      background:var(--bright);
+      color:#fff;
+      padding:6px 14px;
+      border-radius:15px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .badge-pro {
+      background:#2ecc71;
+    }
+
+    .badge-con {
+      background:#e74c3c;
+    }
+
+    .pros-cons {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      margin:30px 0;
+    }
+
+    .pros, .cons {
+      background:#f9f9f9;
+      padding:25px;
+      border-radius:10px;
+    }
+
+    .pros h4 {
+      color:#2ecc71;
+    }
+
+    .cons h4 {
+      color:#e74c3c;
+    }
+
+    .comparison-box {
+      background:#f0f7ff;
+      border-left:4px solid var(--accent);
+      padding:25px;
+      margin:25px 0;
+      border-radius:8px;
+    }
+
+    .key-takeaway {
+      background:#fff3cd;
+      border-left:4px solid #ffc107;
+      padding:25px;
+      margin:30px 0;
+      border-radius:8px;
+    }
+
+    .faq {
+      border-bottom:1px solid #e0e0e0;
+      padding:25px 0;
+    }
+
+    .faq:last-child {
+      border-bottom:none;
+    }
+
+    .faq h4 {
+      color:var(--primary);
+      margin-bottom:15px;
+    }
+
+    footer {
+      background:var(--highlight);
+      color:#fff;
+      text-align:center;
+      padding:60px 20px;
+      margin-top:60px;
+    }
+
+    footer h2 {
+      color:#fff;
+      margin-bottom:20px;
+    }
+
+    footer p {
+      color:#ddd;
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .table-wrapper {
+      overflow-x:auto;
+      margin:30px 0;
+    }
+
+    @media(max-width:768px){
+      header h1{font-size:34px}
+      h2{font-size:28px}
+      h3{font-size:22px}
+      body{font-size:16px}
+      p{font-size:16px}
+      section{padding:30px 20px}
+      .pros-cons{grid-template-columns:1fr}
+      table{font-size:14px}
+      th, td{padding:12px 8px}
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>DJI Drones Comparison 2026</h1>
-        <p class="subtitle">Compare all DJI drone models side-by-side to find your perfect match</p>
-        <span class="last-updated">✓ Updated January 2026</span>
-    </header>
 
-    <div class="hero-image">
-        <img src="../images/comparison.jpg" alt="DJI Drones Comparison 2026">
+<header>
+  <h1>Best DJI Drones Comparison 2026</h1>
+  <p>Complete side-by-side comparison of every major DJI drone. Compare specs, real-world performance, camera quality, and find the perfect drone for your needs and budget.</p>
+  <span class="updated">✓ Updated February 2026</span>
+</header>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&h=520&fit=crop" alt="Best DJI Drones Comparison 2026">
+</div>
+
+<div class="container">
+
+<section>
+  <h2>DJI Drones Comparison Guide 2026</h2>
+  <p>DJI controls over 70% of the consumer drone market, offering everything from budget-friendly models under $200 to professional cinema drones exceeding $5,000. With so many options, choosing the right DJI drone can be overwhelming.</p>
+  
+  <p>This comprehensive comparison guide breaks down every major DJI drone available in 2026, comparing camera specifications, flight performance, portability, intelligent features, and real-world use cases. Whether you're a complete beginner, travel vlogger, professional filmmaker, or commercial operator, this guide will help you find the perfect DJI drone.</p>
+
+  <div class="key-takeaway">
+    <h3>Quick Recommendations</h3>
+    <ul>
+      <li><strong>Best Overall:</strong> DJI Air 3S - Perfect balance of performance, features, and price</li>
+      <li><strong>Best for Travel:</strong> DJI Mini 5 Pro - Under 250g, no registration required in most countries</li>
+      <li><strong>Best for Professionals:</strong> DJI Mavic 4 Pro - Hasselblad camera, superior image quality</li>
+      <li><strong>Best Budget:</strong> DJI Mini 3 - Excellent features at an entry-level price</li>
+      <li><strong>Best for Beginners:</strong> DJI Neo - Ultra-compact, palm-sized, incredibly easy to fly</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Complete DJI Drones Comparison Table</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Price</th>
+          <th>Weight</th>
+          <th>Camera</th>
+          <th>Flight Time</th>
+          <th>Max Range</th>
+          <th>Obstacle Avoidance</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model">DJI Air 3S</td>
+          <td class="price">$1,099</td>
+          <td>724g</td>
+          <td>Dual 1-inch CMOS, 4K/120fps</td>
+          <td>45 min</td>
+          <td>20 km</td>
+          <td>6-directional</td>
+          <td>Content Creators</td>
+        </tr>
+        <tr>
+          <td class="model">DJI Mini 5 Pro</td>
+          <td class="price">$759</td>
+          <td>249g</td>
+          <td>1/1.3-inch CMOS, 4K/60fps</td>
+          <td>34 min</td>
+          <td>16 km</td>
+          <td>3-directional</td>
+          <td>Travel & Portability</td>
+        </tr>
+        <tr>
+          <td class="model">DJI Mavic 4 Pro</td>
+          <td class="price">$1,749</td>
+          <td>958g</td>
+          <td>Hasselblad, 5.1K/50fps</td>
+          <td>43 min</td>
+          <td>25 km</td>
+          <td>6-directional</td>
+          <td>Professional Video</td>
+        </tr>
+        <tr>
+          <td class="model">DJI Mini 3</td>
+          <td class="price">$419</td>
+          <td>249g</td>
+          <td>1/1.3-inch CMOS, 4K/30fps</td>
+          <td>38 min</td>
+          <td>10 km</td>
+          <td>2-directional</td>
+          <td>Beginners</td>
+        </tr>
+        <tr>
+          <td class="model">DJI Neo</td>
+          <td class="price">$199</td>
+          <td>135g</td>
+          <td>1/2-inch CMOS, 4K/30fps</td>
+          <td>18 min</td>
+          <td>10 km</td>
+          <td>1-directional</td>
+          <td>Selfies & Social Media</td>
+        </tr>
+        <tr>
+          <td class="model">DJI Avata 2</td>
+          <td class="price">$999</td>
+          <td>377g</td>
+          <td>1/1.3-inch CMOS, 4K/60fps</td>
+          <td>23 min</td>
+          <td>13 km</td>
+          <td>4-directional</td>
+          <td>FPV & Immersive Flight</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Detailed DJI Drone Reviews & Comparisons</h2>
+
+  <h3>1. DJI Air 3S - Best Overall Drone 2026</h3>
+  <p>The DJI Air 3S represents the sweet spot in DJI's lineup, offering professional-grade features at a mid-range price. Released in late 2024, the Air 3S improved upon its predecessor with enhanced low-light performance and better obstacle avoidance.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>Dual Camera System:</strong> Primary 1-inch sensor captures stunning 4K/120fps video with exceptional dynamic range</li>
+    <li><strong>Medium Telephoto:</strong> 70mm equivalent lens perfect for compression shots and creative perspectives</li>
+    <li><strong>Flight Time:</strong> Up to 45 minutes gives you plenty of time for complex shots</li>
+    <li><strong>Omnidirectional Obstacle Avoidance:</strong> Six sensors detect obstacles in all directions</li>
+    <li><strong>ActiveTrack 5.0:</strong> Improved subject tracking even in challenging environments</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Excellent image quality in all lighting conditions</li>
+        <li>Long flight time for extended shooting</li>
+        <li>Dual camera offers creative flexibility</li>
+        <li>Relatively compact and portable</li>
+        <li>Outstanding value for features offered</li>
+      </ul>
     </div>
-
-    <div class="container">
-        <section class="intro">
-            <h2>Complete DJI Drone Comparison Guide</h2>
-            <p>Choosing the right DJI drone can be overwhelming with so many excellent options available. Whether you're a professional filmmaker, <a href="drones-real-estate.html">real estate photographer</a>, content creator, hobbyist, or first-time flyer, this comprehensive comparison guide breaks down every current DJI drone model to help you make an informed decision.</p>
-            <p>We've researched every drone on this list extensively. Our comparison covers real-world performance for <a href="construction-site-surveys.html">construction site surveys</a>, <a href="drones-in-agriculture.html">agriculture monitoring</a>, <a href="drones-roofing-contractors.html">roofing inspections</a>, and more. From the budget-friendly DJI Neo to the professional-grade Inspire 3, we'll help you understand which drone best fits your needs and budget.</p>
-        </section>
-
-        <section class="comparison-matrix">
-            <h2 class="section-title">Complete Specs Comparison Matrix</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Model</th>
-                        <th>Price (USD)</th>
-                        <th>Camera Quality</th>
-                        <th>Max Flight Time</th>
-                        <th>Weight</th>
-                        <th>Best Use Case</th>
-                        <th>Shop</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="model-column">DJI Mavic 4 Pro</td>
-                        <td class="price-tag">$1,749</td>
-                        <td>5.1K/60fps Hasselblad</td>
-                        <td>43 minutes</td>
-                        <td>963g</td>
-                        <td>Professional Video</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-mavic-4-pro?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Air 3S</td>
-                        <td class="price-tag">$1,099</td>
-                        <td>4K/120fps Dual Camera</td>
-                        <td>45 minutes</td>
-                        <td>724g</td>
-                        <td>Content Creation</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-air-3s?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Mini 5 Pro</td>
-                        <td class="price-tag">$759</td>
-                        <td>4K/60fps Pro Camera</td>
-                        <td>34 minutes</td>
-                        <td>249g</td>
-                        <td>Travel/Portability</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-mini-5-pro?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Mini 4 Pro</td>
-                        <td class="price-tag">$759</td>
-                        <td>4K/60fps</td>
-                        <td>34 minutes</td>
-                        <td>249g</td>
-                        <td>Mobile Creators</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-mini-4-pro?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Mini 3</td>
-                        <td class="price-tag">$419</td>
-                        <td>4K/30fps</td>
-                        <td>38 minutes</td>
-                        <td>249g</td>
-                        <td>Beginners</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-mini-3?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Neo</td>
-                        <td class="price-tag">$199</td>
-                        <td>4K/30fps</td>
-                        <td>18 minutes</td>
-                        <td>135g</td>
-                        <td>Selfies/Vlogging</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-neo?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Flip</td>
-                        <td class="price-tag">$1,199</td>
-                        <td>4K/60fps</td>
-                        <td>31 minutes</td>
-                        <td>730g</td>
-                        <td>FPV/Action</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-flip?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                    <tr>
-                        <td class="model-column">DJI Inspire 3</td>
-                        <td class="price-tag">$16,499</td>
-                        <td>8K RAW Cinema</td>
-                        <td>28 minutes</td>
-                        <td>4,445g</td>
-                        <td>Film Production</td>
-                        <td><a href="https://store.dji.com/ca/product/dji-inspire-3?clickpid=6910618" target="_blank" class="shop-link">View →</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <h2 class="section-title">Head-to-Head Comparisons</h2>
-        <div class="comparison-grid">
-            <article class="comparison-card">
-                <span class="vs-badge">POPULAR COMPARISON</span>
-                <h3>Mavic 4 Pro vs Air 3S</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Camera Quality</span>
-                        <span class="feature-value">Hasselblad vs Dual <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Video Resolution</span>
-                        <span class="feature-value">5.1K vs 4K <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Flight Time</span>
-                        <span class="feature-value">43m vs 45m <span class="winner-badge">Air Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Price</span>
-                        <span class="feature-value">$1,749 vs $1,099 <span class="winner-badge">Air Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Professional Features</span>
-                        <span class="feature-value">Advanced vs Standard <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Verdict:</strong> Choose Mavic 4 Pro for professional work. Choose Air 3S for best value and dual-camera versatility.</p>
-            </article>
-
-            <article class="comparison-card">
-                <span class="vs-badge">MINI SHOWDOWN</span>
-                <h3>Mini 5 Pro vs Mini 4 Pro</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Camera Features</span>
-                        <span class="feature-value">Latest vs Previous Gen <span class="winner-badge">5 Pro Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Flight Time</span>
-                        <span class="feature-value">34m vs 34m <span class="winner-badge">Tie</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Technology</span>
-                        <span class="feature-value">Newer vs Older <span class="winner-badge">5 Pro Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Price</span>
-                        <span class="feature-value">$759 vs $759 <span class="winner-badge">Tie</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Portability</span>
-                        <span class="feature-value">249g vs 249g <span class="winner-badge">Tie</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Verdict:</strong> Mini 5 Pro is the newer model with latest features at same price point.</p>
-            </article>
-
-            <article class="comparison-card">
-                <span class="vs-badge">MID-RANGE BATTLE</span>
-                <h3>Air 3S vs Mini 5 Pro</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Flight Time</span>
-                        <span class="feature-value">45m vs 34m <span class="winner-badge">Air Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Camera System</span>
-                        <span class="feature-value">Dual vs Single <span class="winner-badge">Air Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Portability</span>
-                        <span class="feature-value">724g vs 249g <span class="winner-badge">Mini Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">FAA Registration</span>
-                        <span class="feature-value">Required vs Not Required <span class="winner-badge">Mini Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Price</span>
-                        <span class="feature-value">$1,099 vs $759 <span class="winner-badge">Mini Wins</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Verdict:</strong> Air 3S for superior performance and video. Mini 5 Pro for travel and staying under 250g FAA limit.</p>
-            </article>
-
-            <article class="comparison-card">
-                <span class="vs-badge">BUDGET PICKS</span>
-                <h3>Mini 3 vs DJI Neo</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Flight Time</span>
-                        <span class="feature-value">38m vs 18m <span class="winner-badge">Mini 3 Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Size</span>
-                        <span class="feature-value">249g vs 135g <span class="winner-badge">Neo Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Price</span>
-                        <span class="feature-value">$419 vs $199 <span class="winner-badge">Neo Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Versatility</span>
-                        <span class="feature-value">Full Drone vs Selfie <span class="winner-badge">Mini 3 Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Best For</span>
-                        <span class="feature-value">Learning vs Quick Shots <span class="winner-badge">Depends</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Verdict:</strong> Mini 3 for serious beginners. Neo for casual selfies and fun.</p>
-            </article>
-
-            <article class="comparison-card">
-                <span class="vs-badge">PROFESSIONAL TIER</span>
-                <h3>Mavic 4 Pro vs Inspire 3</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Resolution</span>
-                        <span class="feature-value">5.1K vs 8K RAW <span class="winner-badge">Inspire Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Portability</span>
-                        <span class="feature-value">963g vs 4,445g <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Price</span>
-                        <span class="feature-value">$1,749 vs $16,499 <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Cinema Grade</span>
-                        <span class="feature-value">Pro vs Cinema <span class="winner-badge">Inspire Wins</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Ease of Use</span>
-                        <span class="feature-value">Simple vs Complex <span class="winner-badge">Mavic Wins</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Verdict:</strong> Inspire 3 only for serious production work. Mavic 4 Pro delivers professional quality at fraction of cost.</p>
-            </article>
-
-            <article class="comparison-card">
-                <span class="vs-badge">BEST VALUE</span>
-                <h3>Value Champions by Category</h3>
-                <ul class="feature-list">
-                    <li>
-                        <span class="feature-name">Overall Best Value</span>
-                        <span class="feature-value">DJI Air 3S <span class="winner-badge">$1,099</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Budget Champion</span>
-                        <span class="feature-value">DJI Mini 3 <span class="winner-badge">$419</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Pro Value</span>
-                        <span class="feature-value">Mavic 4 Pro <span class="winner-badge">$1,749</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Travel Value</span>
-                        <span class="feature-value">Mini 5 Pro <span class="winner-badge">$759</span></span>
-                    </li>
-                    <li>
-                        <span class="feature-name">Fun Value</span>
-                        <span class="feature-value">DJI Neo <span class="winner-badge">$199</span></span>
-                    </li>
-                </ul>
-                <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;"><strong>Analysis:</strong> Air 3S offers the best balance of features, performance, and price for most users.</p>
-            </article>
-        </div>
-
-        <section class="key-differences">
-            <h2 class="section-title">Key Differences That Actually Matter</h2>
-            
-            <div class="difference-item">
-                <h3>1. Weight Class Has Legal & Practical Implications</h3>
-                <p>Drones under 250g (Neo, Mini 3, Mini 4 Pro, Mini 5 Pro) don't require FAA registration in the US, saving time and hassle. They're also allowed in some areas where heavier drones are restricted. However, lighter drones are more susceptible to wind. The Air 3S, Mavic 4 Pro, Flip, and Inspire 3 all require registration but offer better stability in challenging conditions.</p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>2. Camera Quality Varies Significantly</h3>
-                <p>The Mavic 4 Pro's Hasselblad camera and larger sensor deliver noticeably better low-light performance and dynamic range compared to the Mini series. The Air 3S's dual-camera system offers unique versatility. For professional work or demanding lighting conditions, camera quality matters enormously. For social media and casual use, any of these cameras will exceed expectations.</p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>3. Flight Time Impacts Real-World Usage</h3>
-                <p>The Air 3S's 45-minute flight time (30-35 minutes real-world) versus the Neo's 18 minutes (12-15 minutes real-world) makes a huge practical difference. Longer flight times mean fewer battery swaps, less downtime, and more flexibility during shoots. Budget for multiple batteries regardless of which drone you choose.</p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>4. Portability Determines If You'll Actually Use It</h3>
-                <p>The 249g Mini series drones fit in small bags and are effortless to carry. The Mavic 4 Pro requires more space but is still very portable. The Inspire 3 needs a dedicated case and vehicle space. Be honest about your willingness to carry gear—a Mini 5 Pro you bring everywhere beats a Mavic 4 Pro left at home.</p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>5. Price Doesn't Tell the Whole Story</h3>
-                <p>Don't forget essential accessories: extra batteries ($100-200 each), memory cards ($30-80), ND filters ($50-100), carrying case ($30-100), and insurance ($100-300/year). A $419 Mini 3 can easily become $800+ with necessary accessories. Budget 30-40% more than the base price for a complete setup.</p>
-            </div>
-        </section>
-
-        <section class="buying-guide">
-            <h2>Smart Buying Guide: Match Your Needs</h2>
-            <p>Don't just buy based on specs or price. Consider how you'll actually use your drone.</p>
-            
-            <div class="guide-grid">
-                <div class="guide-item">
-                    <h3>🎯 Define Your Primary Use</h3>
-                    <p>Are you shooting client work, creating YouTube content, documenting travel, or just having fun? Your primary use should dictate 80% of your decision. Don't overspend on features you won't use.</p>
-                </div>
-                
-                <div class="guide-item">
-                    <h3>💰 Consider Total Cost</h3>
-                    <p>Budget for necessary accessories beyond the drone itself. A complete setup costs 30-40% more than the base price. Factor in batteries, memory cards, filters, cases, and insurance.</p>
-                </div>
-                
-                <div class="guide-item">
-                    <h3>📈 Plan for Growth</h3>
-                    <p>If you're serious about aerial photography, buy the drone you'll need in 6 months, not today. You'll outgrow a beginner drone quickly if you're committed. The Air 3S or Mavic 4 Pro will serve you for years.</p>
-                </div>
-                
-                <div class="guide-item">
-                    <h3>🌍 Think About Portability</h3>
-                    <p>Will you actually bring it if it's heavy and bulky? A Mini 5 Pro that you carry everywhere beats a Mavic 4 Pro left at home. Be honest about your willingness to carry gear.</p>
-                </div>
-                
-                <div class="guide-item">
-                    <h3>⚖️ Evaluate Trade-offs</h3>
-                    <p>Every drone is a compromise. The Inspire 3 has amazing image quality but terrible portability. The Neo is ultra-portable but has short flight time. Identify which trade-offs you can accept.</p>
-                </div>
-                
-                <div class="guide-item">
-                    <h3>📚 Start With Your Budget</h3>
-                    <p>Set a realistic budget including accessories. $500 budget: Neo or Mini 3. $800-1000: Mini 5 Pro or Mini 4 Pro. $1200-1500: Air 3S. $2000+: Mavic 4 Pro. $15000+: Inspire 3 for production work only.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="key-differences">
-            <h2 class="section-title">Related Articles & Guides</h2>
-            
-            <div class="difference-item">
-                <h3>Industry-Specific Drone Guides</h3>
-                <p>
-                    <a href="drones-in-agriculture.html" style="color: var(--bright); margin-right: 15px;">Agriculture Drones</a>
-                    <a href="drones-roofing-contractors.html" style="color: var(--bright); margin-right: 15px;">Roofing Inspections</a>
-                    <a href="drones-real-estate.html" style="color: var(--bright); margin-right: 15px;">Real Estate Photography</a>
-                    <a href="construction-site-surveys.html" style="color: var(--bright); margin-right: 15px;">Construction Surveys</a>
-                    <a href="drones-infrastructure-inspections.html" style="color: var(--bright); margin-right: 15px;">Infrastructure Inspections</a>
-                </p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>Safety & Workflow</h3>
-                <p>
-                    <a href="drone-safety-construction.html" style="color: var(--bright); margin-right: 15px;">Drone Safety on Construction Sites</a>
-                    <a href="construction-workflow-efficiency.html" style="color: var(--bright); margin-right: 15px;">Workflow Efficiency</a>
-                    <a href="choosing-dji-construction-drone.html" style="color: var(--bright); margin-right: 15px;">Choosing the Right Construction Drone</a>
-                </p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>Advanced Applications</h3>
-                <p>
-                    <a href="thermal-drone-inspection.html" style="color: var(--bright); margin-right: 15px;">Thermal Inspections</a>
-                    <a href="drone-lidar-construction.html" style="color: var(--bright); margin-right: 15px;">LiDAR Mapping</a>
-                    <a href="photogrammetry-vs-lidar.html" style="color: var(--bright); margin-right: 15px;">Photogrammetry vs LiDAR</a>
-                    <a href="volumetric-stockpile-measurement.html" style="color: var(--bright); margin-right: 15px;">Stockpile Measurement</a>
-                    <a href="aerial-surveying-construction.html" style="color: var(--bright); margin-right: 15px;">Aerial Surveying</a>
-                </p>
-            </div>
-            
-            <div class="difference-item">
-                <h3>Special Use Cases</h3>
-                <p>
-                    <a href="search-rescue-drones.html" style="color: var(--bright); margin-right: 15px;">Search & Rescue</a>
-                    <a href="film-production-drones.html" style="color: var(--bright); margin-right: 15px;">Film Production</a>
-                    <a href="event-coverage-drones.html" style="color: var(--bright); margin-right: 15px;">Event Coverage</a>
-                    <a href="wildlife-conservation-drones.html" style="color: var(--bright); margin-right: 15px;">Wildlife Conservation</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="cta-box">
-            <h2>Ready to Buy Your Perfect Drone?</h2>
-            <p>Shop the complete DJI lineup with official pricing and current promotions</p>
-            <a href="https://store.dji.com/ca?clickpid=6910618" target="_blank" class="cta-button">Shop DJI Store →</a>
-        </section>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Heavier than Mini series (requires registration)</li>
+        <li>No built-in ND filters (must purchase separately)</li>
+        <li>More expensive than entry-level options</li>
+        <li>Larger size less convenient for everyday carry</li>
+      </ul>
     </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Air 3S?</h4>
+    <p>The Air 3S is perfect for serious content creators, YouTubers, and photographers who need professional quality without the bulk and price of the Mavic Pro series. If you're creating content for clients or building a portfolio, this is your best bet. The dual camera system and excellent low-light performance make it versatile for any shooting scenario.</p>
+  </div>
+
+  <h3>2. DJI Mini 5 Pro - Best Travel Drone</h3>
+  <p>Weighing exactly 249 grams, the Mini 5 Pro sits just under the registration threshold in most countries, making it the ultimate travel companion. Despite its tiny size, it packs impressive features that rival much larger drones.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>Sub-250g Weight:</strong> No FAA registration required in the US, simplified regulations worldwide</li>
+    <li><strong>1/1.3-inch Sensor:</strong> Larger sensor than previous Mini models delivers better image quality</li>
+    <li><strong>4K/60fps Recording:</strong> Smooth, detailed video perfect for travel vlogs</li>
+    <li><strong>Tri-directional Obstacle Avoidance:</strong> Front, back, and bottom sensors prevent crashes</li>
+    <li><strong>34-Minute Flight Time:</strong> Impressive endurance for such a small drone</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Ultra-portable, fits in any bag or large pocket</li>
+        <li>No registration needed in most countries</li>
+        <li>Excellent camera for its size</li>
+        <li>Great flight time for weight class</li>
+        <li>Quieter than larger drones</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Less stable in windy conditions</li>
+        <li>Smaller sensor means lower low-light performance</li>
+        <li>Limited obstacle avoidance (no side sensors)</li>
+        <li>Maximum video bitrate lower than Air/Mavic series</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Mini 5 Pro?</h4>
+    <p>Travel vloggers, backpackers, and anyone who prioritizes portability will love the Mini 5 Pro. If you frequently fly internationally or want a drone you can literally carry everywhere, this is your drone. The sub-250g weight is a game-changer for regulatory compliance and peace of mind.</p>
+  </div>
+
+  <h3>3. DJI Mavic 4 Pro - Professional Grade Performance</h3>
+  <p>The Mavic 4 Pro is DJI's flagship consumer drone, offering professional cinema camera quality in a foldable package. With its Hasselblad camera and advanced imaging capabilities, it's the choice for serious professionals.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>Hasselblad L2D-20c Camera:</strong> Legendary color science and exceptional detail</li>
+    <li><strong>5.1K Video at 50fps:</strong> Massive resolution with smooth motion</li>
+    <li><strong>Variable Aperture:</strong> f/2.8 to f/11 for full creative control</li>
+    <li><strong>10-bit D-Log M Color Profile:</strong> Maximum editing flexibility in post-production</li>
+    <li><strong>43-Minute Flight Time:</strong> Plenty of time for professional shoots</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Best image quality in DJI's consumer lineup</li>
+        <li>Hasselblad color science is unmatched</li>
+        <li>Variable aperture enables ND-free shooting in some conditions</li>
+        <li>Professional codec support (ProRes on Cine model)</li>
+        <li>Superior build quality and reliability</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Expensive - nearly double the Air 3S price</li>
+        <li>Heavier and bulkier than Air series</li>
+        <li>Overkill for casual users and hobbyists</li>
+        <li>More complex features have steeper learning curve</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Mavic 4 Pro?</h4>
+    <p>Professional filmmakers, commercial drone operators, and serious enthusiasts who need the absolute best image quality should choose the Mavic 4 Pro. If you're delivering content to paying clients or need broadcast-quality footage, the investment is worthwhile. The Hasselblad camera alone justifies the price difference for professionals.</p>
+  </div>
+
+  <h3>4. DJI Mini 3 - Best Budget Drone</h3>
+  <p>The Mini 3 offers incredible value, bringing many premium features to an entry-level price point. While it lacks some of the advanced features of newer models, it's more than capable for beginners and casual users.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>4K/30fps Video:</strong> Quality enough for most casual content creation</li>
+    <li><strong>True Vertical Shooting:</strong> Perfect for Instagram, TikTok, and social media</li>
+    <li><strong>38-Minute Flight Time:</strong> Exceptional for the price point</li>
+    <li><strong>Lightweight Design:</strong> Easy to transport and handle</li>
+    <li><strong>Simplified Controls:</strong> Great for learning drone basics</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Very affordable entry point to DJI ecosystem</li>
+        <li>Good image quality for the price</li>
+        <li>Long flight time</li>
+        <li>Vertical video mode built-in</li>
+        <li>Easy to fly for beginners</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Limited obstacle avoidance (only front and back)</li>
+        <li>No 4K/60fps option</li>
+        <li>Older transmission system (less range)</li>
+        <li>Smaller sensor affects low-light performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Mini 3?</h4>
+    <p>First-time drone buyers, social media content creators on a budget, and anyone wanting to test the waters before investing in more expensive models should consider the Mini 3. It delivers solid performance without breaking the bank, making it perfect for learning and casual use.</p>
+  </div>
+
+  <h3>5. DJI Neo - Best for Social Media & Fun</h3>
+  <p>The DJI Neo represents a completely new category - the ultra-compact, palm-sized selfie drone. At just 135 grams, it's DJI's smallest and most affordable drone, designed specifically for quick, casual content creation.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>Palm Launch & Landing:</strong> No controller needed for basic operation</li>
+    <li><strong>AI Subject Tracking:</strong> Automatically follows and frames you</li>
+    <li><strong>QuickShots:</strong> Pre-programmed cinematic movements at the touch of a button</li>
+    <li><strong>Ultra-Compact:</strong> Fits in your pocket, weighs less than a smartphone</li>
+    <li><strong>Voice Control:</strong> Start recording with simple voice commands</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Incredibly affordable at $199</li>
+        <li>Easiest DJI drone to fly - designed for beginners</li>
+        <li>Perfect for spontaneous social media content</li>
+        <li>No learning curve required</li>
+        <li>Super portable and lightweight</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Short 18-minute flight time</li>
+        <li>Limited image quality compared to larger models</li>
+        <li>Very limited range (10km theoretical, much less practical)</li>
+        <li>Minimal obstacle avoidance</li>
+        <li>Not suitable for professional work</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Neo?</h4>
+    <p>Social media influencers, vloggers who want quick selfie shots, complete beginners, and anyone who wants a fun, easy-to-use drone for casual content will appreciate the Neo. It's not a replacement for serious drones, but rather a complementary tool for spontaneous content creation.</p>
+  </div>
+
+  <h3>6. DJI Avata 2 - Best FPV Experience</h3>
+  <p>The Avata 2 is DJI's second-generation FPV (First Person View) drone, offering an immersive flying experience with cinema-quality stabilization. It's designed for users who want the thrill of FPV flying with the safety and ease of DJI's technology.</p>
+
+  <h4>Key Features</h4>
+  <ul>
+    <li><strong>Immersive FPV Flying:</strong> Paired with DJI Goggles 3 for true first-person experience</li>
+    <li><strong>Built-in Propeller Guards:</strong> Safer for indoor and close-proximity flying</li>
+    <li><strong>RockSteady 3.0:</strong> Incredible stabilization despite aggressive maneuvers</li>
+    <li><strong>4K/60fps Recording:</strong> Smooth, cinematic footage from FPV perspective</li>
+    <li><strong>Manual & Normal Modes:</strong> Easy for beginners, thrilling for experienced pilots</li>
+  </ul>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>✓ Pros</h4>
+      <ul>
+        <li>Unique immersive flying experience</li>
+        <li>Great for action sports and dynamic shots</li>
+        <li>Propeller guards enable indoor flying</li>
+        <li>Easy Mode makes FPV accessible to beginners</li>
+        <li>Excellent stabilization for FPV drone</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>✗ Cons</h4>
+      <ul>
+        <li>Requires goggles (adds to total cost)</li>
+        <li>Shorter flight time than camera drones</li>
+        <li>Different flying style requires practice</li>
+        <li>Not ideal for traditional landscape photography</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h4>Who Should Buy the DJI Avata 2?</h4>
+    <p>Action sports filmmakers, extreme sports enthusiasts, and anyone wanting dynamic, immersive footage will love the Avata 2. It's perfect for chase scenes, indoor flying through tight spaces, and capturing unique perspectives impossible with traditional drones.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Camera Quality Comparison</h2>
+  <p>Camera quality is often the most important factor when choosing a drone. Here's how DJI's models compare across different shooting scenarios:</p>
+
+  <h3>Daylight Performance</h3>
+  <p>In bright daylight with good lighting conditions, all DJI drones perform well. However, there are notable differences:</p>
+  <ul>
+    <li><strong>Mavic 4 Pro:</strong> Best detail, color accuracy, and dynamic range thanks to Hasselblad partnership</li>
+    <li><strong>Air 3S:</strong> Excellent quality that rivals the Mavic in good light, dual cameras add versatility</li>
+    <li><strong>Mini 5 Pro:</strong> Impressive for its size, slightly softer detail than larger models</li>
+    <li><strong>Mini 3 & Neo:</strong> Good quality for social media and casual use, noticeable quality gap from premium models</li>
+  </ul>
+
+  <h3>Low-Light Performance</h3>
+  <p>Low-light capability separates premium drones from budget models. Sensor size is the determining factor:</p>
+  <ul>
+    <li><strong>Mavic 4 Pro:</strong> Exceptional low-light performance, usable footage even in challenging conditions</li>
+    <li><strong>Air 3S:</strong> Very good low-light capability, 1-inch sensor handles evening shots well</li>
+    <li><strong>Mini Series & Neo:</strong> Smaller sensors struggle in low light, best used in daylight or golden hour</li>
+  </ul>
+
+  <h3>Video Features Comparison</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Mavic 4 Pro</th>
+          <th>Air 3S</th>
+          <th>Mini 5 Pro</th>
+          <th>Mini 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Max Resolution</td>
+          <td>5.1K/50fps</td>
+          <td>4K/120fps</td>
+          <td>4K/60fps</td>
+          <td>4K/30fps</td>
+        </tr>
+        <tr>
+          <td>Slow Motion</td>
+          <td>4K/100fps</td>
+          <td>4K/120fps</td>
+          <td>2.7K/60fps</td>
+          <td>2.7K/60fps</td>
+        </tr>
+        <tr>
+          <td>Color Profile</td>
+          <td>10-bit D-Log M</td>
+          <td>10-bit D-Log M</td>
+          <td>10-bit D-Log M</td>
+          <td>8-bit Standard</td>
+        </tr>
+        <tr>
+          <td>Max Bitrate</td>
+          <td>200 Mbps</td>
+          <td>150 Mbps</td>
+          <td>150 Mbps</td>
+          <td>100 Mbps</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Flight Performance & Range</h2>
+  <p>Flight performance encompasses battery life, maximum range, wind resistance, and overall handling characteristics.</p>
+
+  <h3>Flight Time Rankings</h3>
+  <ol>
+    <li><strong>DJI Air 3S:</strong> 45 minutes (longest in lineup)</li>
+    <li><strong>DJI Mavic 4 Pro:</strong> 43 minutes</li>
+    <li><strong>DJI Mini 3:</strong> 38 minutes</li>
+    <li><strong>DJI Mini 5 Pro:</strong> 34 minutes</li>
+    <li><strong>DJI Avata 2:</strong> 23 minutes</li>
+    <li><strong>DJI Neo:</strong> 18 minutes</li>
+  </ol>
+
+  <p><strong>Real-World Note:</strong> Manufacturer flight times are achieved in ideal conditions. Expect 20-25% less in real-world use with wind, temperature variations, and active flying.</p>
+
+  <h3>Wind Resistance</h3>
+  <p>Larger, heavier drones handle wind better:</p>
+  <ul>
+    <li><strong>Best:</strong> Mavic 4 Pro and Air 3S handle strong winds confidently</li>
+    <li><strong>Good:</strong> Mini 5 Pro manages moderate wind but shows more movement</li>
+    <li><strong>Limited:</strong> Mini 3 and Neo struggle in anything beyond light breeze</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Portability & Travel Considerations</h2>
+  
+  <h3>Size Comparison When Folded</h3>
+  <ul>
+    <li><strong>DJI Neo:</strong> 135×77×49mm (fits in pocket)</li>
+    <li><strong>DJI Mini 5 Pro:</strong> 145×90×62mm (fits in small camera bag)</li>
+    <li><strong>DJI Mini 3:</strong> 145×90×62mm (same size as Mini 5 Pro)</li>
+    <li><strong>DJI Air 3S:</strong> 207×100×91mm (medium bag required)</li>
+    <li><strong>DJI Mavic 4 Pro:</strong> 221×96×90mm (dedicated drone bag recommended)</li>
+  </ul>
+
+  <h3>Registration Requirements</h3>
+  <div class="comparison-box">
+    <h4>Understanding the 250g Rule</h4>
+    <p>Many countries, including the US, Canada, and EU nations, require drone registration for aircraft over 250 grams. The Mini series (Mini 3, Mini 5 Pro) and Neo are specifically designed to stay under this threshold, significantly simplifying the process for recreational users. However, even sub-250g drones may have restrictions in certain areas, so always check local regulations.</p>
+  </div>
+
+  <h3>Best Drones for International Travel</h3>
+  <ol>
+    <li><strong>Mini 5 Pro:</strong> Best all-around travel drone - capable yet unrestricted</li>
+    <li><strong>Neo:</strong> Most portable but limited capabilities</li>
+    <li><strong>Air 3S:</strong> Worth the registration if image quality is priority</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Intelligent Flight Features</h2>
+  <p>Modern DJI drones include sophisticated autonomous flight modes that enable complex shots without advanced piloting skills.</p>
+
+  <h3>Common Intelligent Features</h3>
+  <ul>
+    <li><strong>ActiveTrack:</strong> Automatically follows and keeps subject in frame (all models except Mini 3)</li>
+    <li><strong>QuickShots:</strong> Pre-programmed cinematic movements (Dronie, Helix, Rocket, etc.)</li>
+    <li><strong>Waypoints:</strong> Program specific flight paths to repeat automatically</li>
+    <li><strong>Hyperlapse:</strong> Automated time-lapse videos while moving</li>
+    <li><strong>MasterShots:</strong> AI-generated short videos combining multiple shots</li>
+  </ul>
+
+  <h3>Feature Availability by Model</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Mavic 4 Pro</th>
+          <th>Air 3S</th>
+          <th>Mini 5 Pro</th>
+          <th>Mini 3</th>
+          <th>Neo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ActiveTrack</td>
+          <td>5.0</td>
+          <td>5.0</td>
+          <td>4.0</td>
+          <td>3.0</td>
+          <td>Basic</td>
+        </tr>
+        <tr>
+          <td>QuickShots</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+        </tr>
+        <tr>
+          <td>Waypoints</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✗</td>
+          <td>✗</td>
+        </tr>
+        <tr>
+          <td>MasterShots</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✗</td>
+        </tr>
+        <tr>
+          <td>Hyperlapse</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✗</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Safety & Obstacle Avoidance</h2>
+  <p>Collision avoidance systems prevent costly crashes and enable safer autonomous flight modes.</p>
+
+  <h3>Obstacle Avoidance Comparison</h3>
+  <ul>
+    <li><strong>Mavic 4 Pro & Air 3S:</strong> 6-directional (omnidirectional) - forward, backward, left, right, up, down</li>
+    <li><strong>Avata 2:</strong> 4-directional - forward, backward, up, down</li>
+    <li><strong>Mini 5 Pro:</strong> 3-directional - forward, backward, down</li>
+    <li><strong>Mini 3:</strong> 2-directional - forward, backward</li>
+    <li><strong>Neo:</strong> 1-directional - downward only</li>
+  </ul>
+
+  <p><strong>Important:</strong> More sensors mean safer autonomous flight and better ActiveTrack performance. If you plan to use intelligent flight modes frequently, invest in models with comprehensive obstacle avoidance.</p>
+</section>
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <h4>Which DJI drone has the best camera?</h4>
+    <p>The DJI Mavic 4 Pro has the best camera quality with its Hasselblad L2D-20c sensor, 5.1K video recording, variable aperture, and 10-bit D-Log M color profile. For most users, however, the Air 3S offers comparable quality at a significantly lower price point.</p>
+  </div>
+
+  <div class="faq">
+    <h4>What's the difference between the Mini 5 Pro and Mini 3?</h4>
+    <p>The Mini 5 Pro features a larger 1/1.3-inch sensor (better image quality), 4K/60fps video (vs 4K/30fps), improved ActiveTrack 4.0, three-directional obstacle avoidance (vs two-directional), and extended range with OcuSync 4. The Mini 3 is more affordable but has fewer features.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Do I need to register my DJI drone?</h4>
+    <p>In the United States, drones weighing over 250 grams (0.55 pounds) require FAA registration for recreational use. The DJI Mini series (Mini 3, Mini 5 Pro) and Neo are under this threshold. However, registration requirements vary by country, and even sub-250g drones may need registration for commercial use.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Which DJI drone is best for beginners?</h4>
+    <p>The DJI Neo ($199) is the easiest for absolute beginners with its palm launch and simplified controls. For beginners wanting more serious capabilities, the DJI Mini 3 ($419) offers excellent value with user-friendly features and quality performance.</p>
+  </div>
+
+  <div class="faq">
+    <h4>How long can DJI drones fly?</h4>
+    <p>Flight times range from 18 minutes (Neo) to 45 minutes (Air 3S). Real-world flight times are typically 20-25% shorter than advertised due to wind, temperature, and active flying. Always land with at least 15-20% battery remaining for safety.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Can DJI drones fly in rain?</h4>
+    <p>No DJI consumer drones are waterproof or officially rated for rain. Light mist might be tolerable, but flying in rain risks serious damage. Some DJI enterprise drones (like the M30 series) are weather-resistant, but consumer models are not.</p>
+  </div>
+
+  <div class="faq">
+    <h4>What's the best DJI drone for real estate photography?</h4>
+    <p>The DJI Air 3S is ideal for real estate with its excellent image quality, 45-minute flight time allowing multiple properties per battery, and omnidirectional obstacle avoidance for safe indoor flying. The Mini 5 Pro is a good alternative if portability and stealth are priorities.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Is the Mavic 4 Pro worth the extra cost over the Air 3S?</h4>
+    <p>For professional filmmakers, commercial operators, and serious enthusiasts who need the absolute best image quality and advanced features, yes. For hobbyists and content creators, the Air 3S delivers 90% of the Mavic's quality at nearly half the price, making it better value for most users.</p>
+  </div>
+
+  <div class="faq">
+    <h4>What accessories do I need for my DJI drone?</h4>
+    <p>Essential accessories include extra batteries (1-2 minimum), ND filters for optimal shutter speed, a carrying case, microSD cards (128GB+ recommended), and propeller guards for beginners. A tablet or large phone improves the flying experience with better screen visibility.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Can DJI drones follow me automatically?</h4>
+    <p>Yes, most DJI drones feature ActiveTrack which automatically follows subjects. The Air 3S and Mavic 4 Pro have the most advanced ActiveTrack 5.0, while budget models have simpler versions. The Neo can follow you without any controller using AI tracking.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Final Verdict: Which DJI Drone Should You Buy?</h2>
+  
+  <div class="key-takeaway">
+    <h3>Our Top Recommendations for 2026</h3>
+    <p><strong>For Most People:</strong> The <strong>DJI Air 3S</strong> ($1,099) is the best overall choice. It offers professional image quality, excellent flight time, comprehensive obstacle avoidance, and versatile dual cameras at a reasonable price. Unless you have specific needs for extreme portability or professional features, this is your best option.</p>
+    
+    <p><strong>For Travelers:</strong> The <strong>DJI Mini 5 Pro</strong> ($759) is unbeatable. Sub-250g weight eliminates registration headaches internationally, yet it delivers impressive image quality and 34 minutes of flight time. Perfect for backpackers, travel vloggers, and anyone who wants a capable drone that fits anywhere.</p>
+    
+    <p><strong>For Professionals:</strong> The <strong>DJI Mavic 4 Pro</strong> ($1,749) justifies its premium price with Hasselblad image quality, 5.1K video, variable aperture, and professional color profiles. If you're delivering content to clients or need broadcast-quality footage, this is your tool.</p>
+    
+    <p><strong>For Beginners on Budget:</strong> The <strong>DJI Mini 3</strong> ($419) provides excellent value with 4K video, 38-minute flight time, and all the essential features. It's perfect for learning without the anxiety of crashing an expensive drone.</p>
+    
+    <p><strong>For Social Media:</strong> The <strong>DJI Neo</strong> ($199) is a fun, ultra-portable option for quick selfies and spontaneous content. It's not a replacement for serious drones but fills a unique niche for casual, social-first content creation.</p>
+  </div>
+
+  <h3>Making Your Decision</h3>
+  <p>When choosing your DJI drone, consider these priority factors:</p>
+  <ol>
+    <li><strong>Budget:</strong> Determine your absolute maximum spend, including accessories</li>
+    <li><strong>Use Case:</strong> Be honest about how you'll actually use the drone</li>
+    <li><strong>Travel Plans:</strong> If you fly internationally frequently, sub-250g weight is invaluable</li>
+    <li><strong>Image Quality Needs:</strong> Casual users can save money; professionals need the best</li>
+    <li><strong>Experience Level:</strong> Beginners should start smaller to minimize crash anxiety</li>
+  </ol>
+
+  <p>Remember, any modern DJI drone will capture impressive footage. The differences are important for specific use cases, but even the "budget" Mini 3 produces better results than drones costing thousands just five years ago. Choose based on your needs, not on having the absolute latest technology.</p>
+</section>
+
+</div>
+
+<footer>
+  <h2>Ready to Buy Your DJI Drone?</h2>
+  <p>View official DJI pricing, current promotions, and bundle deals. DJI offers direct shipping, flexible returns, and comprehensive warranty coverage.</p>
+  <br>
+  <a class="btn" href="https://store.dji.com/ca?clickpid=6910618" target="_blank">Shop DJI Store →</a>
+  <br><br>
+  <p style="font-size:14px; opacity:0.7; margin-top:30px;">Last updated: February 2026 | Prices and specifications subject to change</p>
+</footer>
+
 </body>
 </html>
