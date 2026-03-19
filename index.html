@@ -46,6 +46,748 @@
       overflow-x:hidden;
     }
 
+    .parallax-bg{
+      background:url("images/bg-drone.jpg") center/cover fixed no-repeat;
+      min-height:100vh;
+      position:relative;
+    }
+    .overlay{
+      background:rgba(0,0,0,.62);
+      min-height:100vh;
+    }
+    .site{ max-width:var(--max); margin:0 auto; padding:22px; position:relative; z-index:1;}
+
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:18px 12px; background:rgba(0,0,0,.28); border-radius:12px;
+      backdrop-filter: blur(4px);
+    }
+    .brand{ display:flex; gap:12px; align-items:center }
+    .logo-box{ width:88px; height:54px; background:linear-gradient(135deg,#0b2540,#003a6b);
+      border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff;
+      font-weight:700; letter-spacing:.6px; }
+    .site-title{ font-size:18px; color:#fff; margin:0 }
+    nav.top-nav{ display:flex; gap:12px; flex-wrap:wrap }
+    nav.top-nav a{ color:#fff; text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600 }
+    nav.top-nav a:hover{ color:var(--accent); background:rgba(0,0,0,.18) }
+
+    .hero{
+      margin:18px 0 8px; padding:38px 18px; border-radius:12px; text-align:center;
+      color:#05304a; background:rgba(255,255,255,.9); box-shadow:0 10px 40px rgba(11,30,58,.08)
+    }
+    .hero h1{ margin:0; font-size:28px; color:#073044 }
+    .hero p{ margin:8px auto 0; max-width:860px; color:#2d5269 }
+
+    .group{ margin:28px 0 }
+    .group h2{ font-size:18px; color:#cfefff; margin:0 0 12px 6px }
+
+    .product-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:18px }
+    .card{
+      position:relative; background:var(--card); border-radius:var(--radius); padding:10px;
+      box-shadow:var(--shadow); transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      overflow:hidden; display:flex; flex-direction:column; align-items:center; text-align:center
+    }
+    .card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-strong); background:rgba(255,255,255,0.08) }
+    .card a.block{ display:block; width:100% }
+    .card img{ border-radius:10px; width:100%; height:160px; object-fit:cover; display:block; transition: transform .22s ease }
+    .card:hover img{ transform:scale(1.03) }
+    .card h3{ font-size:15px; margin:10px 0 6px; color:#e7f7ff }
+    .card p{ font-size:13px; color:#c9d8e2; margin:0 6px 10px }
+
+    .blog{ margin:36px 0; padding:22px; border-radius:12px; background:rgba(0,0,0,.32); box-shadow:0 8px 28px rgba(11,30,58,.12) }
+    .blog-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px }
+    .blog-card{ text-decoration:none; color:#073044; background:#fff; border-radius:12px; padding:0; overflow:hidden; box-shadow:0 6px 18px rgba(11,30,58,.18); transition: transform .18s ease, box-shadow .18s ease }
+    .blog-card:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(7,30,60,.22) }
+    .blog-card img{ width:100%; height:170px; object-fit:cover; display:block }
+    .blog-card .content{ padding:16px }
+    .blog-card h3{ margin:0 0 8px; font-size:18px; color:#073044 }
+    .blog-card p{ margin:0; color:#3a596c; font-size:14px; line-height:1.55 }
+    .read-more{
+      display:inline-block;
+      margin-top:10px;
+      font-weight:700;
+      color:#0a5e86;
+      text-decoration:none;
+      border: 2px solid #0a5e86;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .read-more:hover{
+      background-color: #0a5e86;
+      color: #fff;
+    }
+
+    footer{ margin:26px 0 10px; padding:12px; text-align:center; color:#c6deec; font-size:13px; background:rgba(0,0,0,.35); border-radius:10px }
+
+    .bottom-drone-wrap{ position: fixed; left:0; right:0; bottom:24px; height:120px; pointer-events:none; z-index:900 }
+    .bottom-drone{ position:absolute; width:120px; height:70px; left:-160px; bottom:0; filter: drop-shadow(0 12px 28px rgba(0,20,40,.36)); animation: bottomLoop 38s ease-in-out infinite }
+    @keyframes bottomLoop{
+      0%   { transform: translateX(-160px) translateY(0) rotate(0deg); }
+      20%  { transform: translateX(12vw)   translateY(-12px) rotate(-4deg); }
+      40%  { transform: translateX(40vw)  translateY(-24px) rotate(3deg); }
+      60%  { transform: translateX(68vw)  translateY(-10px) rotate(-2deg); }
+      80%  { transform: translateX(100vw) translateY(-18px) rotate(2deg); }
+      100% { transform: translateX(-160px) translateY(0) rotate(0deg); }
+    }
+
+    @media (max-width:720px){
+      .card img{ height:140px }
+      .bottom-drone{ display:none }
+      .hero h1{ font-size:22px }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    if (window.location.pathname.endsWith("index.html")) {
+      window.location.replace("https://djigearportal.com/");
+    }
+  </script>
+</head>
+<body>
+  <div class="parallax-bg">
+    <div class="overlay">
+      <div class="site">
+
+        <!-- HEADER -->
+        <header>
+          <div class="brand">
+            <div class="logo-box">DJI<br/>GEAR</div>
+            <div><h2 class="site-title">DJI Gear Portal</h2></div>
+          </div>
+          <nav class="top-nav" aria-label="Main navigation">
+            <a href="#drones">Drones</a>
+            <a href="#cameras">Cameras</a>
+            <a href="#audio">Audio</a>
+            <a href="#gimbals">Gimbals</a>
+            <a href="#guides">Guides</a>
+            <a href="#blog">Blog</a>
+            <a href="about.html">About</a>
+          </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero" role="banner">
+          <h1>Guides & Blog for DJI Drones and Gear</h1>
+          <p>Quick buying guidance, industry use-cases, and direct links to official DJI products.</p>
+        </section>
+
+        <section class="group">
+          <h2 style="color:#cfefff; margin-bottom:12px;">Watch: DJI Gear in Action</h2>
+          <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:14px;">
+            <iframe
+              style="position:absolute; top:0; left:0; width:100%; height:100%;"
+              src="https://www.youtube.com/embed/I8KbwSvR-gA"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <!-- DRONES -->
+        <section id="drones" class="group" aria-labelledby="drones-title">
+          <h2 id="drones-title">Drones</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mavic-4-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mavic4pro.jpg" alt="Mavic 4 Pro">
+              </a>
+              <h3>Mavic 4 Pro</h3>
+              <p>Pro-level aerial imaging and flight performance.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mini-4-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mini4pro.jpg" alt="Mini 4 Pro">
+              </a>
+              <h3>Mini 4 Pro</h3>
+              <p>Ultra-compact performance for creators on the move.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-flip?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/djiflip.jpg" alt="DJI Flip">
+              </a>
+              <h3>DJI Flip</h3>
+              <p>Innovative foldable FPV drone with versatile flying modes.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mini-5-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/djimini5pro.jpg" alt="DJI Mini 5 Pro">
+              </a>
+              <h3>DJI Mini 5 Pro</h3>
+              <p>Advanced compact drone with pro-level camera capabilities.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-neo?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/djineo.jpg" alt="DJI Neo">
+              </a>
+              <h3>DJI Neo</h3>
+              <p>Palm-sized drone perfect for selfies and quick shots.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-inspire-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/inspire3.png" alt="Inspire 3">
+              </a>
+              <h3>Inspire 3</h3>
+              <p>High-end cinema aerial platform.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mini-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mini3.jpg" alt="Mini 3">
+              </a>
+              <h3>Mini 3</h3>
+              <p>Compact, simple, reliable—great first drone.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-air-3s?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/air3s.jpg" alt="DJI Air 3S">
+              </a>
+              <h3>DJI Air 3S</h3>
+              <p>Dual-camera coverage and long flight time for everyday work.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CAMERAS & ACTION -->
+        <section id="cameras" class="group" aria-labelledby="cameras-title">
+          <h2 id="cameras-title">Cameras & Action Gear</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-osmo-pocket-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/pocket3.jpg" alt="Osmo Pocket 3">
+              </a>
+              <h3>Osmo Pocket 3</h3>
+              <p>Handheld pocket camera with pro features.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/osmo-action-4?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/osmoaction4.jpg" alt="Osmo Action 4">
+              </a>
+              <h3>Osmo Action 4</h3>
+              <p>Next-gen action cam for outdoor pros.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/osmo-mobile-7p?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mobile7p.jpg" alt="Osmo Mobile 7P">
+              </a>
+              <h3>Osmo Mobile 7P</h3>
+              <p>Portable smartphone gimbal for silky footage.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/osmo-action-5-pro?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/action5pro.jpg" alt="Osmo Action 5 Pro">
+              </a>
+              <h3>Osmo Action 5 Pro</h3>
+              <p>Rugged, pro-grade action camera.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/osmo-360-standard-combo?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/osmo360standardcombo.jpg" alt="Osmo 360 Standard Combo">
+              </a>
+              <h3>Osmo 360 Standard Combo</h3>
+              <p>Immersive 360° capture with advanced stabilization.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- AUDIO -->
+        <section id="audio" class="group" aria-labelledby="audio-title">
+          <h2 id="audio-title">Audio Equipment</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mic-3?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mic3.jpg" alt="DJI Mic 3">
+              </a>
+              <h3>DJI Mic 3 (2TX + 1RX)</h3>
+              <p>Pro wireless microphone kit.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-mic-2?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/mic2.jpg" alt="DJI Mic 2">
+              </a>
+              <h3>DJI Mic 2</h3>
+              <p>Reliable wireless mic kit (2TX + 1RX).</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GIMBALS -->
+        <section id="gimbals" class="group" aria-labelledby="gimbals-title">
+          <h2 id="gimbals-title">Gimbals & Stabilizers</h2>
+          <div class="product-grid">
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-rs-4-mini?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs4mini.jpg" alt="DJI RS 4 Mini">
+              </a>
+              <h3>DJI RS 4 Mini</h3>
+              <p>Lightweight gimbal for hybrid shooters.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-rs-4-ronin-4d?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs4ronin.jpg" alt="DJI RS 4 / Ronin 4D">
+              </a>
+              <h3>DJI RS 4 / Ronin 4D</h3>
+              <p>Professional stabilizers & cinema systems.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/dji-rs-3-mini?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/rs3mini.jpg" alt="DJI RS 3 Mini">
+              </a>
+              <h3>DJI RS 3 Mini</h3>
+              <p>Compact stabilizer for solo creators.</p>
+            </div>
+
+            <div class="card">
+              <a class="block" href="https://store.dji.com/product/ronin-sc?clickpid=6910618" target="_blank" rel="noopener">
+                <img src="images/roninsc.jpg" alt="Ronin-SC">
+              </a>
+              <h3>Ronin-SC</h3>
+              <p>Light stabilizer for mirrorless shooters.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GUIDES -->
+        <section id="guides" class="blog" aria-labelledby="guides-title">
+          <h2 id="guides-title" style="margin:0 0 12px 6px; color:#e7f7ff;">DJI Drone Guides</h2>
+          <div class="blog-grid">
+            <a class="blog-card" href="how-to-buy-a-drone.html">
+              <img src="images/howto.jpg" alt="How to Buy a Drone">
+              <div class="content">
+                <h3>How To Buy A Drone</h3>
+                <p>Understand types, brands, safety, laws, and accessories — pick the drone that fits your goals.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+            <a class="blog-card" href="blog/best-dji-drones-comparison-2026.html">
+              <img src="images/comparison.jpg" alt="Drone Comparison Guide">
+              <div class="content">
+                <h3>Drone Comparison: Which One Is Right for You?</h3>
+                <p>Compare Mini, Mavic, Air, and Inspire lineups to find your perfect fit for content, travel, and pro work.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" class="blog" aria-labelledby="blog-title">
+          <h2 id="blog-title" style="margin:0 0 12px 6px; color:#e7f7ff;">Blog Articles</h2>
+          <a class="blog-card featured" href="blog/best-dji-drones-comparison-2026.html">
+            <img src="images/dji-drone-comparison.jpg" alt="Best DJI Drones 2026 Comparison">
+            <div class="content">
+              <h3>Best DJI Drones 2026: Complete Comparison Guide</h3>
+              <p>Compare DJI Mini, Air, Mavic, and Inspire drones to find the best one for your needs.</p>
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+
+          <div class="blog-grid">
+            <a class="blog-card" href="blog/thermal-drone-inspection-market.html">
+              <img src="images/thermal-drone-inspection-market.jpg" alt="Thermal drone inspection market growth 2026">
+              <div class="content">
+                <h3>Thermal Drone Inspection Market 2026: Growth, Trends & Opportunities</h3>
+                <p>The thermal drone inspection market is projected to grow from $2.77 billion to $10.7 billion by 2035. Learn what is driving the growth and which industries are adopting fastest.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/thermal-drone-inspection.html">
+              <img src="images/thermal-drone-inspection-dji.jpg" alt="Thermal drone inspection detecting heat loss on commercial rooftop">
+              <div class="content">
+                <h3>Thermal Drone Inspections: What You Need to Know</h3>
+                <p>Learn how thermal-style drone inspections are used to identify roof issues, heat loss, and solar panel inefficiencies—and what consumer DJI drones can realistically handle.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-in-agriculture.html">
+              <img src="images/blog-agriculture.jpg" alt="DJI Drones in Agriculture">
+              <div class="content">
+                <h3>DJI Drones in Agriculture</h3>
+                <p>How DJI's platforms support mapping, scouting, and data-driven crop decisions.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-roofing-contractors.html">
+              <img src="images/blog-roofing.jpg" alt="DJI Drones in Roofing">
+              <div class="content">
+                <h3>DJI Drones in Roofing</h3>
+                <p>Faster estimates, safer inspections, clearer documentation for roofing contractors.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-real-estate.html">
+              <img src="images/blog-realestate.jpg" alt="DJI Drones in Real Estate">
+              <div class="content">
+                <h3>DJI Drones in Real Estate</h3>
+                <p>Win listings and sell faster with high-impact aerial imagery and video.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/construction-site-surveys.html">
+              <img src="images/droneconstruction.jpg" alt="Drone Construction Site Surveys">
+              <div class="content">
+                <h3>How Drones Are Revolutionizing Construction Site Surveys</h3>
+                <p>See how DJI drones speed up site surveys with safer, more accurate aerial data.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/real-time-project-tracking.html">
+              <img src="images/droneprogress.jpg" alt="Mapping Progress: Real-Time Project Tracking with Drones">
+              <div class="content">
+                <h3>Mapping Progress: Real-Time Project Tracking with Drones</h3>
+                <p>Track your builds visually from above and keep teams and clients in sync.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drone-roof-inspections.html">
+              <img src="images/droneroofinspection.jpg" alt="Drone Roof Inspections for Builders">
+              <div class="content">
+                <h3>The Benefits of Drone Roof Inspections for Builders</h3>
+                <p>Make inspections safer, faster, and more detailed with DJI drones.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drone-safety-construction.html">
+              <img src="images/construction-safety-drone.jpg" alt="Drone Safety on Construction Sites">
+              <div class="content">
+                <h3>How Drones Improve Safety on Construction Sites</h3>
+                <p>See how DJI drones prevent accidents, reduce risk, and keep workers safe on active construction sites.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/choosing-dji-construction-drone.html">
+              <img src="images/construction-drone-buyers-guide.jpg" alt="Different DJI drones for construction projects">
+              <div class="content">
+                <h3>Choosing the Right DJI Drone for Construction Projects</h3>
+                <p>Compare DJI drones for surveys, mapping, and inspections so you pick the right tool for your site.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/construction-workflow-efficiency.html">
+              <img src="images/construction-workflow-drone.jpg" alt="Drone improving workflow on a construction site">
+              <div class="content">
+                <h3>How Drones Improve Workflow Efficiency for Construction Teams</h3>
+                <p>Reduce delays, streamline communication, and keep projects moving with aerial data and automation.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-infrastructure-inspections.html">
+              <img src="images/infrastructure-inspection-drone.jpg" alt="DJI drone inspecting bridges and infrastructure">
+              <div class="content">
+                <h3>DJI Drones for Infrastructure Inspections</h3>
+                <p>How drones help inspect bridges, towers, and roadways faster, safer, and more accurately.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/aerial-surveying-construction.html">
+              <img src="images/aerial-surveying-drone.jpg" alt="Drone aerial surveying on construction site">
+              <div class="content">
+                <h3>Aerial Surveying for Construction Crews</h3>
+                <p>See how DJI drones deliver fast, accurate topographic surveys to support modern construction teams.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/volumetric-stockpile-measurement.html">
+              <img src="images/volumetric-stockpile-drone.jpg" alt="Drone measuring construction stockpile">
+              <div class="content">
+                <h3>Volumetric Stockpile Measurement With Drones</h3>
+                <p>Learn how DJI drones calculate accurate stockpile volumes for construction and mining sites.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/thermal-drones-for-construction.html">
+              <img src="images/thermal-drones-construction.jpg" alt="Thermal Drones for Construction">
+              <div class="content">
+                <h3>Thermal Drones for Construction</h3>
+                <p>How DJI drones are used on construction sites to detect heat loss, moisture, and structural issues.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/earthwork-progress-drones.html">
+              <img src="images/earthwork-progress-drones.jpg" alt="Drone monitoring earthwork progress on construction site">
+              <div class="content">
+                <h3>Earthwork Progress Monitoring with Drones</h3>
+                <p>Track excavation, grading, and site development faster with aerial data.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-aed-delivery.html">
+              <img src="images/aed-delivery-drone.jpg" alt="Drone delivering AED to a 911 bystander">
+              <div class="content">
+                <h3>How DJI Drones Could Deliver Life-Saving AEDs to 911 Calls</h3>
+                <p>Explore pilot programs and how DJI drones could speed defibrillator delivery to help save lives.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drones-utility-line-inspections.html">
+              <img src="images/utility-line-drone.jpg" alt="Drone inspecting utility lines">
+              <div class="content">
+                <h3>Drones for Utility Line Inspections</h3>
+                <p>Inspect power lines, poles, and transformers safely with aerial data.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drone-concrete-inspections.html">
+              <img src="images/drones-concrete-inspections.jpg" alt="Drone Concrete Inspections">
+              <div class="content">
+                <h3>How Drones Are Transforming Concrete Inspections</h3>
+                <p>Modern drones allow inspectors to assess cracks, structural weaknesses, and surface conditions without putting workers at risk.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/drone-lidar-construction.html">
+              <img src="images/drones-lidar-construction.jpg" alt="Drone LiDAR Construction">
+              <div class="content">
+                <h3>Drone LiDAR for Construction: High-Precision Mapping</h3>
+                <p>LiDAR-equipped drones provide centimeter-accurate elevation models for planning, progress tracking, and earthworks.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/environmental-compliance.html">
+              <img src="images/drones-environmental-compliance.jpg" alt="Drone Environmental Monitoring">
+              <div class="content">
+                <h3>Environmental Monitoring With Drones: Real-Time Insights</h3>
+                <p>Drones help measure air quality, water pollution, wildlife movement, and land changes — improving environmental compliance.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/photogrammetry-vs-lidar.html">
+              <img src="images/photogrammetry-vs-lidar.jpg" alt="Photogrammetry vs LiDAR drone mapping">
+              <div class="content">
+                <h3>Photogrammetry vs LiDAR: Drone Mapping Explained</h3>
+                <p>Learn the differences between photogrammetry and LiDAR, compare accuracy, and see which DJI drone mapping solution fits your project.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/search-rescue-drones.html">
+              <img src="images/search-rescue-drone.jpg" alt="DJI drone assisting in search and rescue">
+              <div class="content">
+                <h3>DJI Drones for Search & Rescue Operations</h3>
+                <p>Learn how DJI drones help search and rescue teams find missing persons faster and save lives in emergency situations.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/land-surveying-drones.html">
+              <img src="images/land-survey-drone.jpg" alt="DJI drone surveying land">
+              <div class="content">
+                <h3>How Drones Are Changing Land Surveying</h3>
+                <p>Discover how DJI drones are revolutionizing land surveying with faster, more accurate, and safer surveying methods.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/film-production-drones.html">
+              <img src="images/film-production-drone.jpg" alt="DJI drone capturing cinematic footage">
+              <div class="content">
+                <h3>DJI Drones in Film & Video Production</h3>
+                <p>Learn how DJI drones are revolutionizing film production with stunning aerial cinematography that was once impossible.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/solar-inspection-drones.html">
+              <img src="images/solar-inspection-drone.jpg" alt="DJI drone inspecting solar panels">
+              <div class="content">
+                <h3>Solar Panel Inspections Made Easy with Drones</h3>
+                <p>Discover how DJI drones with thermal imaging help solar farms find faulty panels and maximize energy efficiency.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/wildlife-conservation-drones.html">
+              <img src="images/wildlife-conservation-drone.jpg" alt="DJI drone monitoring wildlife">
+              <div class="content">
+                <h3>DJI Drones for Wildlife Conservation</h3>
+                <p>Learn how DJI drones help protect endangered species and monitor wildlife populations without disturbing habitats.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/event-coverage-drones.html">
+              <img src="images/event-coverage-drones.jpg" alt="DJI drone capturing wedding or festival">
+              <div class="content">
+                <h3>Event Coverage: Capturing Weddings & Festivals from Above</h3>
+                <p>Learn how DJI drones are transforming event photography and videography with stunning aerial perspectives.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/disaster-response-drones.html">
+              <img src="images/disaster-response-drones.jpg" alt="DJI drone in disaster response">
+              <div class="content">
+                <h3>DJI Drones in Disaster Response & Recovery</h3>
+                <p>Discover how DJI drones help emergency responders assess damage, coordinate relief efforts, and rebuild communities.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/mining-quarry-drones.html">
+              <img src="images/mining-quarry-drones.jpg" alt="DJI drone surveying mining operation">
+              <div class="content">
+                <h3>Mining & Quarry Operations with DJI Drones</h3>
+                <p>Learn how DJI drones help mining operations with accurate volume measurements, safety monitoring, and efficient site management.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/cell-tower-drones.html">
+              <img src="images/cell-tower-drones.jpg" alt="DJI drone inspecting cell tower">
+              <div class="content">
+                <h3>Cell Tower Inspections: Safer, Faster, Smarter</h3>
+                <p>Discover how DJI drones are making cell tower inspections safer and more efficient for telecom companies.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/vineyard-drones.html">
+              <img src="images/vineyard-drones.jpg" alt="DJI drone monitoring vineyard">
+              <div class="content">
+                <h3>Precision Viticulture: DJI Drones in Vineyard Management</h3>
+                <p>Learn how DJI drones help vineyard managers monitor grape health, optimize irrigation, and improve wine quality.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/insurance-claims-drones.html">
+              <img src="images/insurance-claims-drone.jpg" alt="DJI drone assessing property damage">
+              <div class="content">
+                <h3>Insurance Claims: Speed Up Property Assessments</h3>
+                <p>Discover how DJI drones help insurance adjusters assess property damage faster and more accurately, speeding up claims processing.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/forestry-management-drones.html">
+              <img src="images/forestry-management-drone.jpg" alt="DJI drone monitoring forest">
+              <div class="content">
+                <h3>Forestry Management with DJI Technology</h3>
+                <p>Learn how DJI drones help forest managers monitor tree health, plan harvests, fight wildfires, and manage forests sustainably.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+            <a class="blog-card" href="blog/traffic-management-drones.html">
+              <img src="images/traffic-management-drone.jpg" alt="DJI drone monitoring traffic">
+              <div class="content">
+                <h3>DJI Drones for Traffic Management & Planning</h3>
+                <p>Discover how DJI drones help city planners and traffic engineers improve roads, reduce congestion, and plan better transportation systems.</p>
+                <span class="read-more">Read More →</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+        <footer>
+          <small>© <span id="year"></span> DJI Gear Portal — affiliate website. We link to official DJI product pages.</small>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom flying drone loop -->
+  <div class="bottom-drone-wrap" aria-hidden="true">
+    <img class="bottom-drone" src="images/drone.png" alt="flying drone">
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DJI Gear Portal — Guides & Blog</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://djigearportal.com/">
+  <meta name="description" content="DJI Gear Portal — your source for DJI drone guides and blog insights. Explore DJI Mavic, Mini, Air, Inspire, Osmo gear, plus industry use-cases like construction, roofing, real estate, and agriculture." />
+  <meta name="keywords" content="DJI drones, DJI Mavic, DJI Air, DJI Mini, Inspire 3, Osmo, drone guides, drone blog, drones in construction, roofing, real estate, agriculture" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Social -->
+  <meta property="og:title" content="DJI Gear Portal — Guides & Blog" />
+  <meta property="og:description" content="Guides and industry insights for DJI drones and gear." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://djigearportal.com/" />
+  <meta property="og:image" content="https://djigearportal.com/images/drone.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DJI Gear Portal — Guides & Blog" />
+  <meta name="twitter:description" content="Guides and industry insights for DJI drones and gear." />
+  <meta name="twitter:image" content="https://djigearportal.com/images/drone.png" />
+
+  <link rel="icon" type="image/png" href="images/drone.png" />
+
+  <style>
+    :root{
+      --accent:#00bfff;
+      --ink:#f4f6f9;
+      --bg:#0b1320;
+      --card:rgba(255,255,255,0.05);
+      --shadow:0 0 15px rgba(0,0,0,.35);
+      --shadow-strong:0 0 28px rgba(0,191,255,.35);
+      --radius:14px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#000;
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+
     /* Parallax background wrapper */
     .parallax-bg{
       background:url("images/bg-drone.jpg") center/cover fixed no-repeat;
